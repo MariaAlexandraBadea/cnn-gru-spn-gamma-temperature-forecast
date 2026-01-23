@@ -1,0 +1,1503 @@
+=== Reproducibility (ENV) ===
+Device: cpu
+Torch: 2.9.0+cpu | NumPy: 2.0.2 | Pandas: 2.2.2
+CSV_PATH: /content/sample_data/city_temperature.csv
+Seeds to run: [42, 43, 44]
+=============================
+/tmp/ipython-input-3828873912.py:286: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  for city, g in monthly.groupby("City", sort=False):
+/tmp/ipython-input-3828873912.py:533: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  for city, g in monthly.groupby("City", sort=False):
+[DIAG] Candidate cities with >= 60 TEST windows: 311
+  - Africa: 27
+  - Asia: 35
+  - Australia/South Pacific: 6
+  - Europe: 39
+  - Middle East: 14
+  - North America: 166
+  - South/Central America & Carribean: 24
+/tmp/ipython-input-3828873912.py:439: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  for city, g in monthly.groupby("City", sort=False):
+/tmp/ipython-input-3828873912.py:439: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  for city, g in monthly.groupby("City", sort=False):
+/tmp/ipython-input-3828873912.py:439: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  for city, g in monthly.groupby("City", sort=False):
+/tmp/ipython-input-3828873912.py:439: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  for city, g in monthly.groupby("City", sort=False):
+/tmp/ipython-input-3828873912.py:439: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  for city, g in monthly.groupby("City", sort=False):
+
+[DIAG] Eval sets (disjoint):
+0 ['Addis Ababa', 'Hanoi', 'Sydney', 'Copenhagen', 'London', 'Beirut', 'Boston', 'Allentown', 'Brownsville', 'La Paz']
+1 ['Bangui', 'Osaka', 'Canberra', 'Lisbon', 'Madrid', 'Amman', 'Albany', 'Buffalo', 'Billings', 'Tegucigalpa']
+2 ['Banjul', 'Kuala Lumpur', 'Melbourne', 'Moscow', 'Oslo', 'Damascus', 'Akron Canton', 'Birmingham', 'Asheville', 'Paramaribo']
+3 ['Dakar', 'Singapore', 'Brisbane', 'Budapest', 'Minsk', 'Abu Dhabi', 'Boise', 'Albuquerque', 'Cheyenne', 'Sao Paulo']
+4 ['Lome', 'Tashkent', 'Ulan-bator', 'Auckland', 'Kiev', 'Kuwait', 'Cleveland', 'Cincinnati', 'Caribou', 'Panama City']
+[DIAG] Unique eval cities total: 50
+
+======================================================================
+RUN | seed_split: 1000 | seed_model: 42 | device: cpu | H=6
+======================================================================
+[ART] saved figure: artifacts/figures/fig_r24_framework.png and artifacts/figures/fig_r24_framework.pdf
+[DIAG] Available years: 1995..2020, cities: 321
+[DIAG] Time splits -> TRAIN<= 1999, VAL: 2000..2000, TEST: 2001..2020
+[DIAG] Horizon H=6
+/tmp/ipython-input-3828873912.py:286: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  for city, g in monthly.groupby("City", sort=False):
+[ART] saved figure: artifacts/figures/fig_r26_dataset_examples.png and artifacts/figures/fig_r26_dataset_examples.pdf
+[DIAG] Eval set id: 0 | eval_seed: 123
+[DIAG] Eval (TEST) cities: ['Addis Ababa', 'Hanoi', 'Sydney', 'Copenhagen', 'London', 'Beirut', 'Boston', 'Allentown', 'Brownsville', 'La Paz']
+[DIAG] Geographic split -> TRAIN cities: 280, VAL cities: 31, TEST cities: 10
+/tmp/ipython-input-3828873912.py:658: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  for city, g in df.groupby("City", sort=False):
+[DIAG] TRAIN samples: 11193
+[DIAG] VAL samples: 207
+[DIAG] TEST samples: 2177
+Epoch   1/200 | Train Obj: 12.0027 | Val Obj: 10.4454 | LR: 0.000600
+Epoch   2/200 | Train Obj: 10.2511 | Val Obj: 10.0171 | LR: 0.000900
+Epoch   3/200 | Train Obj: 9.8173 | Val Obj: 9.9865 | LR: 0.001200
+Epoch   4/200 | Train Obj: 9.6191 | Val Obj: 9.8216 | LR: 0.001500
+Epoch   5/200 | Train Obj: 9.4399 | Val Obj: 9.7766 | LR: 0.001800
+Epoch   6/200 | Train Obj: 9.2922 | Val Obj: 9.8231 | LR: 0.002100
+Epoch   7/200 | Train Obj: 9.1769 | Val Obj: 9.7785 | LR: 0.002400
+Epoch   8/200 | Train Obj: 9.0900 | Val Obj: 9.8700 | LR: 0.002700
+Epoch   9/200 | Train Obj: 8.9935 | Val Obj: 9.9043 | LR: 0.003000
+Epoch  10/200 | Train Obj: 8.8623 | Val Obj: 9.9187 | LR: 0.003000
+Epoch  11/200 | Train Obj: 8.7262 | Val Obj: 9.8750 | LR: 0.003000
+Epoch  12/200 | Train Obj: 8.5927 | Val Obj: 9.9819 | LR: 0.002999
+Epoch  13/200 | Train Obj: 8.4489 | Val Obj: 10.1407 | LR: 0.002998
+Epoch  14/200 | Train Obj: 8.3041 | Val Obj: 10.0485 | LR: 0.002997
+Epoch  15/200 | Train Obj: 8.1761 | Val Obj: 10.2217 | LR: 0.002995
+Epoch  16/200 | Train Obj: 8.0493 | Val Obj: 10.2697 | LR: 0.002993
+Epoch  17/200 | Train Obj: 7.9576 | Val Obj: 10.3157 | LR: 0.002990
+Epoch  18/200 | Train Obj: 7.8447 | Val Obj: 10.4086 | LR: 0.002987
+Epoch  19/200 | Train Obj: 7.7441 | Val Obj: 10.4046 | LR: 0.002983
+Epoch  20/200 | Train Obj: 7.6629 | Val Obj: 10.5397 | LR: 0.002980
+Epoch  21/200 | Train Obj: 7.5839 | Val Obj: 10.5802 | LR: 0.002975
+Epoch  22/200 | Train Obj: 7.4735 | Val Obj: 10.4744 | LR: 0.002971
+Epoch  23/200 | Train Obj: 7.4008 | Val Obj: 10.5311 | LR: 0.002965
+Epoch  24/200 | Train Obj: 7.3384 | Val Obj: 10.5892 | LR: 0.002960
+Epoch  25/200 | Train Obj: 7.2684 | Val Obj: 10.7011 | LR: 0.002954
+Early stopping.
+[ART] saved table: artifacts/tables/sign_mag_dependence_set0_seedS1000_seedM42_H6.csv and artifacts/tables/sign_mag_dependence_set0_seedS1000_seedM42_H6.tex
+Epoch   1/200 | Train Obj: 11.9039 | Val Obj: 10.3579 | LR: 0.000600
+Epoch   2/200 | Train Obj: 10.2830 | Val Obj: 10.0123 | LR: 0.000900
+Epoch   3/200 | Train Obj: 9.8980 | Val Obj: 9.9421 | LR: 0.001200
+Epoch   4/200 | Train Obj: 9.6762 | Val Obj: 9.8802 | LR: 0.001500
+Epoch   5/200 | Train Obj: 9.5281 | Val Obj: 9.7965 | LR: 0.001800
+Epoch   6/200 | Train Obj: 9.3945 | Val Obj: 9.6489 | LR: 0.002100
+Epoch   7/200 | Train Obj: 9.2929 | Val Obj: 9.6348 | LR: 0.002400
+Epoch   8/200 | Train Obj: 9.1958 | Val Obj: 9.6545 | LR: 0.002700
+Epoch   9/200 | Train Obj: 9.0870 | Val Obj: 9.7829 | LR: 0.003000
+Epoch  10/200 | Train Obj: 8.9871 | Val Obj: 9.7765 | LR: 0.003000
+Epoch  11/200 | Train Obj: 8.8874 | Val Obj: 9.8958 | LR: 0.003000
+Epoch  12/200 | Train Obj: 8.7496 | Val Obj: 9.9050 | LR: 0.002999
+Epoch  13/200 | Train Obj: 8.6168 | Val Obj: 9.8760 | LR: 0.002998
+Epoch  14/200 | Train Obj: 8.4966 | Val Obj: 9.9181 | LR: 0.002997
+Epoch  15/200 | Train Obj: 8.3779 | Val Obj: 9.9037 | LR: 0.002995
+Epoch  16/200 | Train Obj: 8.2838 | Val Obj: 9.9761 | LR: 0.002993
+Epoch  17/200 | Train Obj: 8.1809 | Val Obj: 10.0698 | LR: 0.002990
+Epoch  18/200 | Train Obj: 8.0609 | Val Obj: 10.1101 | LR: 0.002987
+Epoch  19/200 | Train Obj: 7.9895 | Val Obj: 10.0547 | LR: 0.002983
+Epoch  20/200 | Train Obj: 7.9015 | Val Obj: 10.1447 | LR: 0.002980
+Epoch  21/200 | Train Obj: 7.8216 | Val Obj: 10.2034 | LR: 0.002975
+Epoch  22/200 | Train Obj: 7.7527 | Val Obj: 10.1422 | LR: 0.002971
+Epoch  23/200 | Train Obj: 7.6432 | Val Obj: 10.1030 | LR: 0.002965
+Epoch  24/200 | Train Obj: 7.5986 | Val Obj: 10.1032 | LR: 0.002960
+Epoch  25/200 | Train Obj: 7.5270 | Val Obj: 10.2465 | LR: 0.002954
+Epoch  26/200 | Train Obj: 7.4695 | Val Obj: 10.2066 | LR: 0.002948
+Epoch  27/200 | Train Obj: 7.3965 | Val Obj: 10.2344 | LR: 0.002941
+Early stopping.
+[ART] saved table: artifacts/tables/signed_gamma_ablation.csv and artifacts/tables/signed_gamma_ablation.tex
+[DM] Model vs Persist | DM=-15.488 | p=0 | mean(d)=-1.374920 (negative=better)
+[MBB] block=6 | CI95(mean d_model-pers)=[-1.391117,-1.014151]
+[MBB] block=12 | CI95(mean d_model-pers)=[-1.418906,-0.992753]
+[MBB] block=24 | CI95(mean d_model-pers)=[-1.448281,-0.975773]
+[MBB] block=6 | RMSE(flat) CI95=[1.348,1.476]
+[MBB] block=12 | RMSE(flat) CI95=[1.336,1.492]
+[MBB] block=24 | RMSE(flat) CI95=[1.319,1.505]
+
+===== GLOBAL TEST (JOINT; TEST cities; years > VAL) =====
+H=6 | RMSE(flat): 1.41 °C [1.38, 1.44] | MAE(flat): 1.04 °C [1.01, 1.06] | NLL(per-h): 1.6410 nats | EnergyScore(joint): 2.2275
+AVG over horizons | RMSE: 1.41 | MAE: 1.04 | CRPS: 0.7512 | Cov@95(avg): 95.7%
+Clim-0(flat)  | RMSE: 1.46 | MAE: 1.09
+Persist(flat) | RMSE: 1.83 | MAE: 1.36
+TinyTransformer(flat) | RMSE: 1.46 | MAE: 1.09 | train_sec: 49.5
+
+----- Per-horizon summary (h=1..H) -----
+h= 1 | RMSE=1.36 | MAE=1.01 | CRPS=0.7274 | Cov@95=96.4%
+h= 2 | RMSE=1.41 | MAE=1.03 | CRPS=0.7513 | Cov@95=95.8%
+h= 3 | RMSE=1.43 | MAE=1.05 | CRPS=0.7625 | Cov@95=95.0%
+h= 4 | RMSE=1.43 | MAE=1.05 | CRPS=0.7586 | Cov@95=94.3%
+h= 5 | RMSE=1.42 | MAE=1.04 | CRPS=0.7537 | Cov@95=96.5%
+h= 6 | RMSE=1.41 | MAE=1.04 | CRPS=0.7537 | Cov@95=96.0%
+
+----- Decade-wise (TEST; grouped by first horizon year) -----
+2000s | N=1027 | RMSE(flat)=1.37 | MAE(flat)=1.01 | CRPS(avg)=0.7319 | Cov@95(avg)=95.5%
+2010s | N=1150 | RMSE(flat)=1.45 | MAE(flat)=1.06 | CRPS(avg)=0.7684 | Cov@95(avg)=95.8%
+
+----- Regime-wise (TEST; grouped by first horizon year ranges) -----
+2001-2004 | N= 439 | RMSE(flat)=1.32 | MAE(flat)=0.99 | CRPS(avg)=0.7121 | Cov@95(avg)=95.6%
+2005-2007 | N= 348 | RMSE(flat)=1.44 | MAE(flat)=1.06 | CRPS(avg)=0.7624 | Cov@95(avg)=95.5%
+2008-2010 | N= 360 | RMSE(flat)=1.41 | MAE(flat)=1.03 | CRPS(avg)=0.7538 | Cov@95(avg)=94.9%
+2011-2014 | N= 480 | RMSE(flat)=1.40 | MAE(flat)=1.02 | CRPS(avg)=0.7364 | Cov@95(avg)=96.1%
+2015-2017 | N= 360 | RMSE(flat)=1.54 | MAE(flat)=1.13 | CRPS(avg)=0.8216 | Cov@95(avg)=95.6%
+2018-2020 | N= 190 | RMSE(flat)=1.30 | MAE(flat)=0.98 | CRPS(avg)=0.7201 | Cov@95(avg)=96.6%
+
+----- Per-city (eval cities; years > VAL) -----
+       City                            Region  N_test_windows RMSE (°C) MAE (°C) NLL (per-h) CRPS (°C)  CIA95 Cov@50 Cov@90 Cov@95  N_windows_in_test DM_vs_Persist      DM_p
+Addis Ababa                            Africa             170      0.79     0.60      1.1683    0.4471 96.08%  49.2%  94.9%  98.7%                170        -3.255  0.001369
+      Hanoi                              Asia             223      1.22     0.89      1.4976    0.6462 98.36%  46.8%  93.9%  96.6%                223        -6.362 1.125e-09
+     Sydney           Australia/South Pacific             223      1.30     1.00      1.6606    0.7330 98.48%  43.7%  91.3%  95.6%                223        -6.745 1.312e-10
+ Copenhagen                            Europe             223      1.87     1.46      2.0508    1.0491 96.85%  40.8%  86.2%  92.0%                223       -10.549         0
+     London                            Europe             223      1.46     1.14      1.8207    0.8190 99.77%  42.0%  88.5%  95.2%                223        -7.242  7.18e-12
+     Beirut                       Middle East             223      1.05     0.81      1.4498    0.5991 97.77%  44.8%  91.3%  96.7%                223        -4.924 1.655e-06
+     Boston                     North America             223      1.75     1.33      1.9651    0.9632 98.47%  43.0%  85.9%  93.6%                223        -6.390 9.608e-10
+  Allentown                     North America             223      1.94     1.50      2.0604    1.0722 97.16%  40.4%  85.9%  92.3%                223        -7.156 1.194e-11
+Brownsville                     North America             223      1.34     1.01      1.6475    0.7364 98.04%  47.2%  91.2%  96.9%                223        -7.622 7.174e-13
+     La Paz South/Central America & Carribean             223      0.64     0.51      0.9766    0.3744 94.97%  50.5%  97.5%  99.8%                223        -4.466 1.268e-05
+
+[DM] Per-city summary | significant(p<0.05): 10/10 | Fisher combined p=0
+
+======================================================================
+RUN | seed_split: 1000 | seed_model: 43 | device: cpu | H=6
+======================================================================
+[DIAG] Available years: 1995..2020, cities: 321
+[DIAG] Time splits -> TRAIN<= 1999, VAL: 2000..2000, TEST: 2001..2020
+[DIAG] Horizon H=6
+/tmp/ipython-input-3828873912.py:286: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  for city, g in monthly.groupby("City", sort=False):
+[DIAG] Eval set id: 0 | eval_seed: 123
+[DIAG] Eval (TEST) cities: ['Addis Ababa', 'Hanoi', 'Sydney', 'Copenhagen', 'London', 'Beirut', 'Boston', 'Allentown', 'Brownsville', 'La Paz']
+[DIAG] Geographic split -> TRAIN cities: 280, VAL cities: 31, TEST cities: 10
+/tmp/ipython-input-3828873912.py:658: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  for city, g in df.groupby("City", sort=False):
+[DIAG] TRAIN samples: 11193
+[DIAG] VAL samples: 207
+[DIAG] TEST samples: 2177
+Epoch   1/200 | Train Obj: 11.9498 | Val Obj: 10.3437 | LR: 0.000600
+Epoch   2/200 | Train Obj: 10.2911 | Val Obj: 10.0730 | LR: 0.000900
+Epoch   3/200 | Train Obj: 9.7857 | Val Obj: 10.0072 | LR: 0.001200
+Epoch   4/200 | Train Obj: 9.6104 | Val Obj: 9.9846 | LR: 0.001500
+Epoch   5/200 | Train Obj: 9.4672 | Val Obj: 9.8712 | LR: 0.001800
+Epoch   6/200 | Train Obj: 9.3337 | Val Obj: 9.7997 | LR: 0.002100
+Epoch   7/200 | Train Obj: 9.2055 | Val Obj: 9.7748 | LR: 0.002400
+Epoch   8/200 | Train Obj: 9.1038 | Val Obj: 9.8370 | LR: 0.002700
+Epoch   9/200 | Train Obj: 9.0090 | Val Obj: 9.7916 | LR: 0.003000
+Epoch  10/200 | Train Obj: 8.8911 | Val Obj: 9.8801 | LR: 0.003000
+Epoch  11/200 | Train Obj: 8.7618 | Val Obj: 9.8910 | LR: 0.003000
+Epoch  12/200 | Train Obj: 8.6178 | Val Obj: 9.8982 | LR: 0.002999
+Epoch  13/200 | Train Obj: 8.4838 | Val Obj: 10.0022 | LR: 0.002998
+Epoch  14/200 | Train Obj: 8.3268 | Val Obj: 10.0819 | LR: 0.002997
+Epoch  15/200 | Train Obj: 8.1948 | Val Obj: 10.1367 | LR: 0.002995
+Epoch  16/200 | Train Obj: 8.0911 | Val Obj: 10.0376 | LR: 0.002993
+Epoch  17/200 | Train Obj: 7.9845 | Val Obj: 10.2535 | LR: 0.002990
+Epoch  18/200 | Train Obj: 7.8839 | Val Obj: 10.1031 | LR: 0.002987
+Epoch  19/200 | Train Obj: 7.7672 | Val Obj: 10.2191 | LR: 0.002983
+Epoch  20/200 | Train Obj: 7.7047 | Val Obj: 10.2578 | LR: 0.002980
+Epoch  21/200 | Train Obj: 7.6047 | Val Obj: 10.3878 | LR: 0.002975
+Epoch  22/200 | Train Obj: 7.5177 | Val Obj: 10.3527 | LR: 0.002971
+Epoch  23/200 | Train Obj: 7.4336 | Val Obj: 10.3886 | LR: 0.002965
+Epoch  24/200 | Train Obj: 7.3574 | Val Obj: 10.3354 | LR: 0.002960
+Epoch  25/200 | Train Obj: 7.2838 | Val Obj: 10.4585 | LR: 0.002954
+Epoch  26/200 | Train Obj: 7.2282 | Val Obj: 10.4625 | LR: 0.002948
+Epoch  27/200 | Train Obj: 7.1390 | Val Obj: 10.6401 | LR: 0.002941
+Early stopping.
+[ART] saved table: artifacts/tables/sign_mag_dependence_set0_seedS1000_seedM43_H6.csv and artifacts/tables/sign_mag_dependence_set0_seedS1000_seedM43_H6.tex
+[DM] Model vs Persist | DM=-15.168 | p=0 | mean(d)=-1.354145 (negative=better)
+[MBB] block=6 | CI95(mean d_model-pers)=[-1.405598,-0.992751]
+[MBB] block=12 | CI95(mean d_model-pers)=[-1.406385,-0.981631]
+[MBB] block=24 | CI95(mean d_model-pers)=[-1.422356,-0.969465]
+[MBB] block=6 | RMSE(flat) CI95=[1.353,1.485]
+[MBB] block=12 | RMSE(flat) CI95=[1.343,1.492]
+[MBB] block=24 | RMSE(flat) CI95=[1.333,1.507]
+
+===== GLOBAL TEST (JOINT; TEST cities; years > VAL) =====
+H=6 | RMSE(flat): 1.42 °C [1.38, 1.45] | MAE(flat): 1.04 °C [1.02, 1.06] | NLL(per-h): 1.6470 nats | EnergyScore(joint): 2.2312
+AVG over horizons | RMSE: 1.42 | MAE: 1.04 | CRPS: 0.7578 | Cov@95(avg): 96.1%
+Clim-0(flat)  | RMSE: 1.46 | MAE: 1.09
+Persist(flat) | RMSE: 1.83 | MAE: 1.36
+TinyTransformer(flat) | RMSE: 1.46 | MAE: 1.09 | train_sec: 53.4
+
+----- Per-horizon summary (h=1..H) -----
+h= 1 | RMSE=1.36 | MAE=1.00 | CRPS=0.7265 | Cov@95=96.5%
+h= 2 | RMSE=1.42 | MAE=1.04 | CRPS=0.7555 | Cov@95=96.3%
+h= 3 | RMSE=1.43 | MAE=1.04 | CRPS=0.7604 | Cov@95=95.8%
+h= 4 | RMSE=1.43 | MAE=1.05 | CRPS=0.7653 | Cov@95=96.0%
+h= 5 | RMSE=1.43 | MAE=1.06 | CRPS=0.7649 | Cov@95=96.2%
+h= 6 | RMSE=1.44 | MAE=1.06 | CRPS=0.7740 | Cov@95=96.0%
+
+----- Decade-wise (TEST; grouped by first horizon year) -----
+2000s | N=1027 | RMSE(flat)=1.37 | MAE(flat)=1.02 | CRPS(avg)=0.7373 | Cov@95(avg)=96.0%
+2010s | N=1150 | RMSE(flat)=1.46 | MAE(flat)=1.06 | CRPS(avg)=0.7761 | Cov@95(avg)=96.2%
+
+----- Regime-wise (TEST; grouped by first horizon year ranges) -----
+2001-2004 | N= 439 | RMSE(flat)=1.32 | MAE(flat)=0.99 | CRPS(avg)=0.7147 | Cov@95(avg)=96.8%
+2005-2007 | N= 348 | RMSE(flat)=1.45 | MAE(flat)=1.07 | CRPS(avg)=0.7736 | Cov@95(avg)=95.5%
+2008-2010 | N= 360 | RMSE(flat)=1.42 | MAE(flat)=1.03 | CRPS(avg)=0.7566 | Cov@95(avg)=95.5%
+2011-2014 | N= 480 | RMSE(flat)=1.41 | MAE(flat)=1.03 | CRPS(avg)=0.7464 | Cov@95(avg)=96.3%
+2015-2017 | N= 360 | RMSE(flat)=1.54 | MAE(flat)=1.13 | CRPS(avg)=0.8255 | Cov@95(avg)=96.0%
+2018-2020 | N= 190 | RMSE(flat)=1.32 | MAE(flat)=0.99 | CRPS(avg)=0.7309 | Cov@95(avg)=96.9%
+
+----- Per-city (eval cities; years > VAL) -----
+       City                            Region  N_test_windows RMSE (°C) MAE (°C) NLL (per-h) CRPS (°C)  CIA95 Cov@50 Cov@90 Cov@95  N_windows_in_test DM_vs_Persist      DM_p
+Addis Ababa                            Africa             170      0.78     0.60      1.1502    0.4424 96.90%  46.0%  93.6%  97.8%                170        -3.328  0.001074
+      Hanoi                              Asia             223      1.23     0.90      1.5060    0.6520 97.73%  43.9%  93.9%  97.2%                223        -6.393 9.494e-10
+     Sydney           Australia/South Pacific             223      1.31     1.01      1.6846    0.7434 98.54%  38.9%  90.7%  96.3%                223        -6.749 1.277e-10
+ Copenhagen                            Europe             223      1.88     1.47      2.0797    1.0637 98.47%  36.9%  86.2%  93.6%                223        -9.459         0
+     London                            Europe             223      1.47     1.15      1.8175    0.8246 98.75%  39.2%  90.1%  96.2%                223        -7.005 2.918e-11
+     Beirut                       Middle East             223      1.06     0.82      1.4432    0.6086 98.22%  41.2%  90.4%  96.4%                223        -5.157 5.548e-07
+     Boston                     North America             223      1.74     1.33      1.9827    0.9641 99.16%  38.4%  86.1%  94.7%                223        -6.347 1.222e-09
+  Allentown                     North America             223      1.95     1.52      2.1166    1.0935 97.84%  33.6%  85.4%  93.0%                223        -6.974 3.485e-11
+Brownsville                     North America             223      1.35     1.03      1.6555    0.7454 97.65%  41.9%  91.8%  97.2%                223        -7.575 9.592e-13
+     La Paz South/Central America & Carribean             223      0.63     0.50      0.9157    0.3651 95.29%  48.3%  95.6%  99.5%                223        -5.419 1.556e-07
+
+[DM] Per-city summary | significant(p<0.05): 10/10 | Fisher combined p=0
+
+======================================================================
+RUN | seed_split: 1000 | seed_model: 44 | device: cpu | H=6
+======================================================================
+[DIAG] Available years: 1995..2020, cities: 321
+[DIAG] Time splits -> TRAIN<= 1999, VAL: 2000..2000, TEST: 2001..2020
+[DIAG] Horizon H=6
+/tmp/ipython-input-3828873912.py:286: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  for city, g in monthly.groupby("City", sort=False):
+[DIAG] Eval set id: 0 | eval_seed: 123
+[DIAG] Eval (TEST) cities: ['Addis Ababa', 'Hanoi', 'Sydney', 'Copenhagen', 'London', 'Beirut', 'Boston', 'Allentown', 'Brownsville', 'La Paz']
+[DIAG] Geographic split -> TRAIN cities: 280, VAL cities: 31, TEST cities: 10
+/tmp/ipython-input-3828873912.py:658: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  for city, g in df.groupby("City", sort=False):
+[DIAG] TRAIN samples: 11193
+[DIAG] VAL samples: 207
+[DIAG] TEST samples: 2177
+Epoch   1/200 | Train Obj: 12.1459 | Val Obj: 10.7822 | LR: 0.000600
+Epoch   2/200 | Train Obj: 10.2807 | Val Obj: 10.0782 | LR: 0.000900
+Epoch   3/200 | Train Obj: 9.7753 | Val Obj: 10.0108 | LR: 0.001200
+Epoch   4/200 | Train Obj: 9.5973 | Val Obj: 9.8729 | LR: 0.001500
+Epoch   5/200 | Train Obj: 9.4472 | Val Obj: 9.8106 | LR: 0.001800
+Epoch   6/200 | Train Obj: 9.2943 | Val Obj: 9.6857 | LR: 0.002100
+Epoch   7/200 | Train Obj: 9.1966 | Val Obj: 9.7852 | LR: 0.002400
+Epoch   8/200 | Train Obj: 9.0991 | Val Obj: 9.8317 | LR: 0.002700
+Epoch   9/200 | Train Obj: 8.9943 | Val Obj: 9.9243 | LR: 0.003000
+Epoch  10/200 | Train Obj: 8.8869 | Val Obj: 9.9432 | LR: 0.003000
+Epoch  11/200 | Train Obj: 8.7576 | Val Obj: 10.0997 | LR: 0.003000
+Epoch  12/200 | Train Obj: 8.6361 | Val Obj: 10.1598 | LR: 0.002999
+Epoch  13/200 | Train Obj: 8.4998 | Val Obj: 10.2203 | LR: 0.002998
+Epoch  14/200 | Train Obj: 8.3544 | Val Obj: 10.2554 | LR: 0.002997
+Epoch  15/200 | Train Obj: 8.2339 | Val Obj: 10.3409 | LR: 0.002995
+Epoch  16/200 | Train Obj: 8.0956 | Val Obj: 10.2936 | LR: 0.002993
+Epoch  17/200 | Train Obj: 7.9964 | Val Obj: 10.4601 | LR: 0.002990
+Epoch  18/200 | Train Obj: 7.8830 | Val Obj: 10.2832 | LR: 0.002987
+Epoch  19/200 | Train Obj: 7.7911 | Val Obj: 10.4491 | LR: 0.002983
+Epoch  20/200 | Train Obj: 7.7037 | Val Obj: 10.4822 | LR: 0.002980
+Epoch  21/200 | Train Obj: 7.6111 | Val Obj: 10.4901 | LR: 0.002975
+Epoch  22/200 | Train Obj: 7.5213 | Val Obj: 10.5661 | LR: 0.002971
+Epoch  23/200 | Train Obj: 7.4666 | Val Obj: 10.6988 | LR: 0.002965
+Epoch  24/200 | Train Obj: 7.3740 | Val Obj: 10.6737 | LR: 0.002960
+Epoch  25/200 | Train Obj: 7.2844 | Val Obj: 10.9013 | LR: 0.002954
+Epoch  26/200 | Train Obj: 7.2400 | Val Obj: 10.8470 | LR: 0.002948
+Early stopping.
+[ART] saved table: artifacts/tables/sign_mag_dependence_set0_seedS1000_seedM44_H6.csv and artifacts/tables/sign_mag_dependence_set0_seedS1000_seedM44_H6.tex
+[DM] Model vs Persist | DM=-15.086 | p=0 | mean(d)=-1.344648 (negative=better)
+[MBB] block=6 | CI95(mean d_model-pers)=[-1.398327,-1.006608]
+[MBB] block=12 | CI95(mean d_model-pers)=[-1.408557,-0.992245]
+[MBB] block=24 | CI95(mean d_model-pers)=[-1.429501,-0.984540]
+[MBB] block=6 | RMSE(flat) CI95=[1.358,1.484]
+[MBB] block=12 | RMSE(flat) CI95=[1.344,1.504]
+[MBB] block=24 | RMSE(flat) CI95=[1.325,1.512]
+
+===== GLOBAL TEST (JOINT; TEST cities; years > VAL) =====
+H=6 | RMSE(flat): 1.42 °C [1.39, 1.45] | MAE(flat): 1.05 °C [1.02, 1.07] | NLL(per-h): 1.6365 nats | EnergyScore(joint): 2.2336
+AVG over horizons | RMSE: 1.42 | MAE: 1.05 | CRPS: 0.7594 | Cov@95(avg): 95.3%
+Clim-0(flat)  | RMSE: 1.46 | MAE: 1.09
+Persist(flat) | RMSE: 1.83 | MAE: 1.36
+TinyTransformer(flat) | RMSE: 1.46 | MAE: 1.09 | train_sec: 45.6
+
+----- Per-horizon summary (h=1..H) -----
+h= 1 | RMSE=1.37 | MAE=1.00 | CRPS=0.7276 | Cov@95=95.5%
+h= 2 | RMSE=1.43 | MAE=1.04 | CRPS=0.7560 | Cov@95=95.3%
+h= 3 | RMSE=1.44 | MAE=1.06 | CRPS=0.7672 | Cov@95=95.2%
+h= 4 | RMSE=1.43 | MAE=1.05 | CRPS=0.7688 | Cov@95=95.1%
+h= 5 | RMSE=1.43 | MAE=1.06 | CRPS=0.7661 | Cov@95=95.5%
+h= 6 | RMSE=1.43 | MAE=1.06 | CRPS=0.7705 | Cov@95=95.1%
+
+----- Decade-wise (TEST; grouped by first horizon year) -----
+2000s | N=1027 | RMSE(flat)=1.37 | MAE(flat)=1.01 | CRPS(avg)=0.7353 | Cov@95(avg)=95.1%
+2010s | N=1150 | RMSE(flat)=1.47 | MAE(flat)=1.07 | CRPS(avg)=0.7809 | Cov@95(avg)=95.4%
+
+----- Regime-wise (TEST; grouped by first horizon year ranges) -----
+2001-2004 | N= 439 | RMSE(flat)=1.32 | MAE(flat)=0.99 | CRPS(avg)=0.7114 | Cov@95(avg)=95.9%
+2005-2007 | N= 348 | RMSE(flat)=1.45 | MAE(flat)=1.07 | CRPS(avg)=0.7684 | Cov@95(avg)=95.0%
+2008-2010 | N= 360 | RMSE(flat)=1.41 | MAE(flat)=1.03 | CRPS(avg)=0.7596 | Cov@95(avg)=94.0%
+2011-2014 | N= 480 | RMSE(flat)=1.41 | MAE(flat)=1.03 | CRPS(avg)=0.7441 | Cov@95(avg)=96.0%
+2015-2017 | N= 360 | RMSE(flat)=1.56 | MAE(flat)=1.14 | CRPS(avg)=0.8323 | Cov@95(avg)=94.9%
+2018-2020 | N= 190 | RMSE(flat)=1.36 | MAE(flat)=1.02 | CRPS(avg)=0.7538 | Cov@95(avg)=95.4%
+
+----- Per-city (eval cities; years > VAL) -----
+       City                            Region  N_test_windows RMSE (°C) MAE (°C) NLL (per-h) CRPS (°C)  CIA95 Cov@50 Cov@90 Cov@95  N_windows_in_test DM_vs_Persist      DM_p
+Addis Ababa                            Africa             170      0.79     0.61      1.1381    0.4478 98.45%  43.4%  92.4%  96.4%                170        -3.113  0.002175
+      Hanoi                              Asia             223      1.23     0.90      1.4963    0.6502 98.43%  45.0%  93.6%  96.5%                223        -6.389 9.688e-10
+     Sydney           Australia/South Pacific             223      1.33     1.02      1.6839    0.7516 99.18%  40.0%  90.1%  94.8%                223        -6.290  1.67e-09
+ Copenhagen                            Europe             223      1.89     1.48      2.0690    1.0681 97.24%  38.6%  85.4%  92.4%                223        -9.308         0
+     London                            Europe             223      1.46     1.13      1.8066    0.8173 99.46%  41.5%  89.5%  95.5%                223        -7.147  1.26e-11
+     Beirut                       Middle East             223      1.08     0.84      1.4748    0.6208 99.16%  41.4%  87.5%  94.7%                223        -4.387 1.777e-05
+     Boston                     North America             223      1.74     1.32      1.9565    0.9611 98.81%  39.6%  84.8%  93.9%                223        -6.465 6.352e-10
+  Allentown                     North America             223      1.95     1.51      2.0656    1.0897 97.47%  33.3%  84.7%  92.6%                223        -7.157 1.192e-11
+Brownsville                     North America             223      1.36     1.03      1.6497    0.7471 98.04%  42.8%  91.0%  96.9%                223        -7.174 1.079e-11
+     La Paz South/Central America & Carribean             223      0.63     0.50      0.9059    0.3660 95.44%  42.5%  94.5%  99.3%                223        -4.614 6.674e-06
+
+[DM] Per-city summary | significant(p<0.05): 10/10 | Fisher combined p=0
+Not enough models for epistemic on eval_set=0 (found 0).
+
+======================================================================
+RUN | seed_split: 1001 | seed_model: 42 | device: cpu | H=6
+======================================================================
+[DIAG] Available years: 1995..2020, cities: 321
+[DIAG] Time splits -> TRAIN<= 1999, VAL: 2000..2000, TEST: 2001..2020
+[DIAG] Horizon H=6
+/tmp/ipython-input-3828873912.py:286: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  for city, g in monthly.groupby("City", sort=False):
+[DIAG] Eval set id: 1 | eval_seed: 124
+[DIAG] Eval (TEST) cities: ['Bangui', 'Osaka', 'Canberra', 'Lisbon', 'Madrid', 'Amman', 'Albany', 'Buffalo', 'Billings', 'Tegucigalpa']
+[DIAG] Geographic split -> TRAIN cities: 280, VAL cities: 31, TEST cities: 10
+/tmp/ipython-input-3828873912.py:658: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  for city, g in df.groupby("City", sort=False):
+[DIAG] TRAIN samples: 11347
+[DIAG] VAL samples: 189
+[DIAG] TEST samples: 2230
+Epoch   1/200 | Train Obj: 11.8280 | Val Obj: 11.4321 | LR: 0.000600
+Epoch   2/200 | Train Obj: 10.1156 | Val Obj: 10.9530 | LR: 0.000900
+Epoch   3/200 | Train Obj: 9.6759 | Val Obj: 10.6981 | LR: 0.001200
+Epoch   4/200 | Train Obj: 9.4779 | Val Obj: 10.7988 | LR: 0.001500
+Epoch   5/200 | Train Obj: 9.3104 | Val Obj: 10.6581 | LR: 0.001800
+Epoch   6/200 | Train Obj: 9.1663 | Val Obj: 10.6495 | LR: 0.002100
+Epoch   7/200 | Train Obj: 9.0479 | Val Obj: 10.5032 | LR: 0.002400
+Epoch   8/200 | Train Obj: 8.9567 | Val Obj: 10.5483 | LR: 0.002700
+Epoch   9/200 | Train Obj: 8.8494 | Val Obj: 10.7600 | LR: 0.003000
+Epoch  10/200 | Train Obj: 8.7188 | Val Obj: 10.6388 | LR: 0.003000
+Epoch  11/200 | Train Obj: 8.5734 | Val Obj: 10.8399 | LR: 0.003000
+Epoch  12/200 | Train Obj: 8.4511 | Val Obj: 10.8367 | LR: 0.002999
+Epoch  13/200 | Train Obj: 8.2936 | Val Obj: 11.0131 | LR: 0.002998
+Epoch  14/200 | Train Obj: 8.1596 | Val Obj: 11.0199 | LR: 0.002997
+Epoch  15/200 | Train Obj: 8.0421 | Val Obj: 11.1318 | LR: 0.002995
+Epoch  16/200 | Train Obj: 7.9283 | Val Obj: 11.0801 | LR: 0.002993
+Epoch  17/200 | Train Obj: 7.8231 | Val Obj: 11.1361 | LR: 0.002990
+Epoch  18/200 | Train Obj: 7.7119 | Val Obj: 11.1996 | LR: 0.002987
+Epoch  19/200 | Train Obj: 7.6273 | Val Obj: 11.4024 | LR: 0.002983
+Epoch  20/200 | Train Obj: 7.5249 | Val Obj: 11.2463 | LR: 0.002980
+Epoch  21/200 | Train Obj: 7.4704 | Val Obj: 11.4750 | LR: 0.002975
+Epoch  22/200 | Train Obj: 7.3703 | Val Obj: 11.5887 | LR: 0.002971
+Epoch  23/200 | Train Obj: 7.2942 | Val Obj: 11.4335 | LR: 0.002965
+Epoch  24/200 | Train Obj: 7.2262 | Val Obj: 11.5568 | LR: 0.002960
+Epoch  25/200 | Train Obj: 7.1597 | Val Obj: 11.5922 | LR: 0.002954
+Epoch  26/200 | Train Obj: 7.0784 | Val Obj: 11.7592 | LR: 0.002948
+Epoch  27/200 | Train Obj: 7.0277 | Val Obj: 11.5394 | LR: 0.002941
+Early stopping.
+[ART] saved table: artifacts/tables/sign_mag_dependence_set1_seedS1001_seedM42_H6.csv and artifacts/tables/sign_mag_dependence_set1_seedS1001_seedM42_H6.tex
+[DM] Model vs Persist | DM=-11.237 | p=0 | mean(d)=-1.968781 (negative=better)
+[MBB] block=6 | CI95(mean d_model-pers)=[-2.093007,-1.365328]
+[MBB] block=12 | CI95(mean d_model-pers)=[-2.139880,-1.312692]
+[MBB] block=24 | CI95(mean d_model-pers)=[-2.267371,-1.262274]
+[MBB] block=6 | RMSE(flat) CI95=[1.588,1.762]
+[MBB] block=12 | RMSE(flat) CI95=[1.574,1.779]
+[MBB] block=24 | RMSE(flat) CI95=[1.541,1.813]
+
+===== GLOBAL TEST (JOINT; TEST cities; years > VAL) =====
+H=6 | RMSE(flat): 1.68 °C [1.63, 1.72] | MAE(flat): 1.21 °C [1.19, 1.24] | NLL(per-h): 1.7962 nats | EnergyScore(joint): 2.5891
+AVG over horizons | RMSE: 1.68 | MAE: 1.21 | CRPS: 0.8895 | Cov@95(avg): 95.6%
+Clim-0(flat)  | RMSE: 1.70 | MAE: 1.24
+Persist(flat) | RMSE: 2.19 | MAE: 1.57
+TinyTransformer(flat) | RMSE: 1.70 | MAE: 1.24 | train_sec: 46.8
+
+----- Per-horizon summary (h=1..H) -----
+h= 1 | RMSE=1.63 | MAE=1.17 | CRPS=0.8540 | Cov@95=96.1%
+h= 2 | RMSE=1.66 | MAE=1.20 | CRPS=0.8852 | Cov@95=94.9%
+h= 3 | RMSE=1.69 | MAE=1.23 | CRPS=0.8992 | Cov@95=95.1%
+h= 4 | RMSE=1.68 | MAE=1.22 | CRPS=0.9002 | Cov@95=94.9%
+h= 5 | RMSE=1.70 | MAE=1.23 | CRPS=0.9009 | Cov@95=96.1%
+h= 6 | RMSE=1.68 | MAE=1.22 | CRPS=0.8977 | Cov@95=96.4%
+
+----- Decade-wise (TEST; grouped by first horizon year) -----
+2000s | N=1080 | RMSE(flat)=1.58 | MAE(flat)=1.17 | CRPS(avg)=0.8486 | Cov@95(avg)=96.1%
+2010s | N=1150 | RMSE(flat)=1.76 | MAE(flat)=1.26 | CRPS(avg)=0.9280 | Cov@95(avg)=95.1%
+
+----- Regime-wise (TEST; grouped by first horizon year ranges) -----
+2001-2004 | N= 480 | RMSE(flat)=1.55 | MAE(flat)=1.14 | CRPS(avg)=0.8238 | Cov@95(avg)=96.4%
+2005-2007 | N= 360 | RMSE(flat)=1.62 | MAE(flat)=1.21 | CRPS(avg)=0.8762 | Cov@95(avg)=95.7%
+2008-2010 | N= 360 | RMSE(flat)=1.61 | MAE(flat)=1.17 | CRPS(avg)=0.8670 | Cov@95(avg)=95.8%
+2011-2014 | N= 480 | RMSE(flat)=1.66 | MAE(flat)=1.19 | CRPS(avg)=0.8734 | Cov@95(avg)=95.4%
+2015-2017 | N= 360 | RMSE(flat)=1.85 | MAE(flat)=1.36 | CRPS(avg)=1.0006 | Cov@95(avg)=94.5%
+2018-2020 | N= 190 | RMSE(flat)=1.89 | MAE(flat)=1.28 | CRPS(avg)=0.9539 | Cov@95(avg)=95.4%
+
+----- Per-city (eval cities; years > VAL) -----
+       City                            Region  N_test_windows RMSE (°C) MAE (°C) NLL (per-h) CRPS (°C)  CIA95 Cov@50 Cov@90 Cov@95  N_windows_in_test DM_vs_Persist      DM_p
+     Bangui                            Africa             223      0.58     0.44      0.8321    0.3288 94.82%  45.5%  98.9%  99.9%                223        -6.213  2.53e-09
+      Osaka                              Asia             223      1.30     1.07      1.7147    0.8011 97.02%  32.1%  92.5%  97.8%                223        -2.864  0.004585
+   Canberra           Australia/South Pacific             223      1.41     1.08      1.7450    0.8041 98.28%  35.7%  91.2%  96.6%                223        -9.179         0
+     Lisbon                            Europe             223      1.38     1.15      1.7445    0.8201 95.92%  26.9%  92.8%  98.9%                223        -8.027 5.773e-14
+     Madrid                            Europe             223      1.73     1.41      2.0018    1.0192 97.14%  26.0%  83.3%  93.0%                223        -8.391 5.773e-15
+      Amman                       Middle East             223      1.59     1.23      1.9306    0.8961 98.75%  35.0%  88.8%  96.2%                223        -7.946 9.637e-14
+     Albany                     North America             223      2.03     1.57      2.1601    1.1439 98.40%  28.9%  83.4%  93.5%                223        -6.860 6.746e-11
+    Buffalo                     North America             223      2.11     1.63      2.2123    1.1840 97.79%  29.0%  84.2%  92.9%                223        -7.673 5.249e-13
+   Billings                     North America             223      2.76     2.02      2.6758    1.5191 92.12%  27.9%  78.6%  87.5%                223        -6.049 6.112e-09
+Tegucigalpa South/Central America & Carribean             223      0.65     0.51      0.9450    0.3789 95.44%  39.8%  97.3%  99.3%                223        -4.713  4.31e-06
+
+[DM] Per-city summary | significant(p<0.05): 10/10 | Fisher combined p=0
+
+======================================================================
+RUN | seed_split: 1001 | seed_model: 43 | device: cpu | H=6
+======================================================================
+[DIAG] Available years: 1995..2020, cities: 321
+[DIAG] Time splits -> TRAIN<= 1999, VAL: 2000..2000, TEST: 2001..2020
+[DIAG] Horizon H=6
+/tmp/ipython-input-3828873912.py:286: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  for city, g in monthly.groupby("City", sort=False):
+[DIAG] Eval set id: 1 | eval_seed: 124
+[DIAG] Eval (TEST) cities: ['Bangui', 'Osaka', 'Canberra', 'Lisbon', 'Madrid', 'Amman', 'Albany', 'Buffalo', 'Billings', 'Tegucigalpa']
+[DIAG] Geographic split -> TRAIN cities: 280, VAL cities: 31, TEST cities: 10
+/tmp/ipython-input-3828873912.py:658: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  for city, g in df.groupby("City", sort=False):
+[DIAG] TRAIN samples: 11347
+[DIAG] VAL samples: 189
+[DIAG] TEST samples: 2230
+Epoch   1/200 | Train Obj: 11.7846 | Val Obj: 11.3381 | LR: 0.000600
+Epoch   2/200 | Train Obj: 10.1020 | Val Obj: 10.9281 | LR: 0.000900
+Epoch   3/200 | Train Obj: 9.6434 | Val Obj: 10.9588 | LR: 0.001200
+Epoch   4/200 | Train Obj: 9.4723 | Val Obj: 10.6952 | LR: 0.001500
+Epoch   5/200 | Train Obj: 9.3338 | Val Obj: 10.5925 | LR: 0.001800
+Epoch   6/200 | Train Obj: 9.2145 | Val Obj: 10.5993 | LR: 0.002100
+Epoch   7/200 | Train Obj: 9.1013 | Val Obj: 10.4649 | LR: 0.002400
+Epoch   8/200 | Train Obj: 8.9998 | Val Obj: 10.3837 | LR: 0.002700
+Epoch   9/200 | Train Obj: 8.9092 | Val Obj: 10.4935 | LR: 0.003000
+Epoch  10/200 | Train Obj: 8.7898 | Val Obj: 10.5761 | LR: 0.003000
+Epoch  11/200 | Train Obj: 8.6547 | Val Obj: 10.7229 | LR: 0.003000
+Epoch  12/200 | Train Obj: 8.5139 | Val Obj: 10.9053 | LR: 0.002999
+Epoch  13/200 | Train Obj: 8.3620 | Val Obj: 10.9118 | LR: 0.002998
+Epoch  14/200 | Train Obj: 8.2135 | Val Obj: 10.9154 | LR: 0.002997
+Epoch  15/200 | Train Obj: 8.0785 | Val Obj: 11.1122 | LR: 0.002995
+Epoch  16/200 | Train Obj: 7.9411 | Val Obj: 11.2354 | LR: 0.002993
+Epoch  17/200 | Train Obj: 7.8286 | Val Obj: 11.4352 | LR: 0.002990
+Epoch  18/200 | Train Obj: 7.7101 | Val Obj: 11.5264 | LR: 0.002987
+Epoch  19/200 | Train Obj: 7.6207 | Val Obj: 11.4862 | LR: 0.002983
+Epoch  20/200 | Train Obj: 7.5372 | Val Obj: 11.4589 | LR: 0.002980
+Epoch  21/200 | Train Obj: 7.4221 | Val Obj: 11.5561 | LR: 0.002975
+Epoch  22/200 | Train Obj: 7.3339 | Val Obj: 11.6143 | LR: 0.002971
+Epoch  23/200 | Train Obj: 7.2520 | Val Obj: 11.5781 | LR: 0.002965
+Epoch  24/200 | Train Obj: 7.2066 | Val Obj: 11.7874 | LR: 0.002960
+Epoch  25/200 | Train Obj: 7.1139 | Val Obj: 11.5993 | LR: 0.002954
+Epoch  26/200 | Train Obj: 7.0481 | Val Obj: 11.9893 | LR: 0.002948
+Epoch  27/200 | Train Obj: 6.9687 | Val Obj: 11.7700 | LR: 0.002941
+Epoch  28/200 | Train Obj: 6.9001 | Val Obj: 11.8395 | LR: 0.002934
+Early stopping.
+[ART] saved table: artifacts/tables/sign_mag_dependence_set1_seedS1001_seedM43_H6.csv and artifacts/tables/sign_mag_dependence_set1_seedS1001_seedM43_H6.tex
+[DM] Model vs Persist | DM=-11.068 | p=0 | mean(d)=-1.909388 (negative=better)
+[MBB] block=6 | CI95(mean d_model-pers)=[-2.129331,-1.337139]
+[MBB] block=12 | CI95(mean d_model-pers)=[-2.111072,-1.348437]
+[MBB] block=24 | CI95(mean d_model-pers)=[-2.209970,-1.234922]
+[MBB] block=6 | RMSE(flat) CI95=[1.610,1.785]
+[MBB] block=12 | RMSE(flat) CI95=[1.581,1.801]
+[MBB] block=24 | RMSE(flat) CI95=[1.557,1.841]
+
+===== GLOBAL TEST (JOINT; TEST cities; years > VAL) =====
+H=6 | RMSE(flat): 1.69 °C [1.65, 1.74] | MAE(flat): 1.23 °C [1.20, 1.25] | NLL(per-h): 1.7992 nats | EnergyScore(joint): 2.6095
+AVG over horizons | RMSE: 1.69 | MAE: 1.23 | CRPS: 0.8920 | Cov@95(avg): 95.1%
+Clim-0(flat)  | RMSE: 1.70 | MAE: 1.24
+Persist(flat) | RMSE: 2.19 | MAE: 1.57
+TinyTransformer(flat) | RMSE: 1.70 | MAE: 1.24 | train_sec: 46.3
+
+----- Per-horizon summary (h=1..H) -----
+h= 1 | RMSE=1.63 | MAE=1.17 | CRPS=0.8514 | Cov@95=94.9%
+h= 2 | RMSE=1.70 | MAE=1.23 | CRPS=0.8865 | Cov@95=95.5%
+h= 3 | RMSE=1.73 | MAE=1.25 | CRPS=0.9085 | Cov@95=94.6%
+h= 4 | RMSE=1.72 | MAE=1.25 | CRPS=0.9088 | Cov@95=94.8%
+h= 5 | RMSE=1.69 | MAE=1.23 | CRPS=0.8967 | Cov@95=95.9%
+h= 6 | RMSE=1.68 | MAE=1.22 | CRPS=0.9003 | Cov@95=95.0%
+
+----- Decade-wise (TEST; grouped by first horizon year) -----
+2000s | N=1080 | RMSE(flat)=1.60 | MAE(flat)=1.18 | CRPS(avg)=0.8503 | Cov@95(avg)=95.7%
+2010s | N=1150 | RMSE(flat)=1.78 | MAE(flat)=1.27 | CRPS(avg)=0.9313 | Cov@95(avg)=94.6%
+
+----- Regime-wise (TEST; grouped by first horizon year ranges) -----
+2001-2004 | N= 480 | RMSE(flat)=1.57 | MAE(flat)=1.15 | CRPS(avg)=0.8277 | Cov@95(avg)=95.7%
+2005-2007 | N= 360 | RMSE(flat)=1.62 | MAE(flat)=1.21 | CRPS(avg)=0.8716 | Cov@95(avg)=95.8%
+2008-2010 | N= 360 | RMSE(flat)=1.63 | MAE(flat)=1.19 | CRPS(avg)=0.8707 | Cov@95(avg)=95.1%
+2011-2014 | N= 480 | RMSE(flat)=1.68 | MAE(flat)=1.20 | CRPS(avg)=0.8788 | Cov@95(avg)=95.3%
+2015-2017 | N= 360 | RMSE(flat)=1.86 | MAE(flat)=1.37 | CRPS(avg)=1.0008 | Cov@95(avg)=93.5%
+2018-2020 | N= 190 | RMSE(flat)=1.94 | MAE(flat)=1.31 | CRPS(avg)=0.9613 | Cov@95(avg)=95.1%
+
+----- Per-city (eval cities; years > VAL) -----
+       City                            Region  N_test_windows RMSE (°C) MAE (°C) NLL (per-h) CRPS (°C)  CIA95 Cov@50 Cov@90 Cov@95  N_windows_in_test DM_vs_Persist      DM_p
+     Bangui                            Africa             223      0.58     0.44      0.8407    0.3269 95.05%  49.9%  98.1%  99.7%                223        -6.266 1.897e-09
+      Osaka                              Asia             223      1.33     1.09      1.7149    0.8094 97.75%  32.6%  90.3%  96.9%                223        -2.166   0.03139
+   Canberra           Australia/South Pacific             223      1.41     1.09      1.7392    0.7965 98.77%  39.5%  91.6%  96.0%                223        -8.883  2.22e-16
+     Lisbon                            Europe             223      1.44     1.19      1.7545    0.8361 96.55%  29.3%  92.1%  98.3%                223        -6.260 1.968e-09
+     Madrid                            Europe             223      1.76     1.45      2.0219    1.0352 97.03%  28.0%  81.9%  92.5%                223        -7.927 1.081e-13
+      Amman                       Middle East             223      1.59     1.24      1.9114    0.8952 98.83%  38.3%  88.6%  96.1%                223        -7.672 5.287e-13
+     Albany                     North America             223      2.04     1.58      2.1500    1.1435 98.18%  30.9%  84.1%  93.3%                223        -6.750 1.273e-10
+    Buffalo                     North America             223      2.13     1.65      2.2182    1.1903 96.77%  31.5%  84.2%  91.9%                223        -7.196 9.467e-12
+   Billings                     North America             223      2.78     2.02      2.6795    1.5119 91.89%  30.6%  78.4%  87.3%                223        -6.297 1.606e-09
+Tegucigalpa South/Central America & Carribean             223      0.65     0.51      0.9616    0.3756 95.60%  42.5%  97.3%  99.2%                223        -4.745 3.732e-06
+
+[DM] Per-city summary | significant(p<0.05): 10/10 | Fisher combined p=0
+
+======================================================================
+RUN | seed_split: 1001 | seed_model: 44 | device: cpu | H=6
+======================================================================
+[DIAG] Available years: 1995..2020, cities: 321
+[DIAG] Time splits -> TRAIN<= 1999, VAL: 2000..2000, TEST: 2001..2020
+[DIAG] Horizon H=6
+/tmp/ipython-input-3828873912.py:286: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  for city, g in monthly.groupby("City", sort=False):
+[DIAG] Eval set id: 1 | eval_seed: 124
+[DIAG] Eval (TEST) cities: ['Bangui', 'Osaka', 'Canberra', 'Lisbon', 'Madrid', 'Amman', 'Albany', 'Buffalo', 'Billings', 'Tegucigalpa']
+[DIAG] Geographic split -> TRAIN cities: 280, VAL cities: 31, TEST cities: 10
+/tmp/ipython-input-3828873912.py:658: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  for city, g in df.groupby("City", sort=False):
+[DIAG] TRAIN samples: 11347
+[DIAG] VAL samples: 189
+[DIAG] TEST samples: 2230
+Epoch   1/200 | Train Obj: 11.9739 | Val Obj: 12.0484 | LR: 0.000600
+Epoch   2/200 | Train Obj: 10.1614 | Val Obj: 10.8618 | LR: 0.000900
+Epoch   3/200 | Train Obj: 9.6642 | Val Obj: 10.8734 | LR: 0.001200
+Epoch   4/200 | Train Obj: 9.4936 | Val Obj: 10.8272 | LR: 0.001500
+Epoch   5/200 | Train Obj: 9.3643 | Val Obj: 10.5721 | LR: 0.001800
+Epoch   6/200 | Train Obj: 9.2111 | Val Obj: 10.5350 | LR: 0.002100
+Epoch   7/200 | Train Obj: 9.0987 | Val Obj: 10.4429 | LR: 0.002400
+Epoch   8/200 | Train Obj: 8.9810 | Val Obj: 10.5204 | LR: 0.002700
+Epoch   9/200 | Train Obj: 8.8734 | Val Obj: 10.8141 | LR: 0.003000
+Epoch  10/200 | Train Obj: 8.7841 | Val Obj: 10.7557 | LR: 0.003000
+Epoch  11/200 | Train Obj: 8.6596 | Val Obj: 10.8970 | LR: 0.003000
+Epoch  12/200 | Train Obj: 8.5163 | Val Obj: 11.1230 | LR: 0.002999
+Epoch  13/200 | Train Obj: 8.4032 | Val Obj: 11.1569 | LR: 0.002998
+Epoch  14/200 | Train Obj: 8.2720 | Val Obj: 11.1366 | LR: 0.002997
+Epoch  15/200 | Train Obj: 8.1383 | Val Obj: 11.2511 | LR: 0.002995
+Epoch  16/200 | Train Obj: 8.0128 | Val Obj: 11.4413 | LR: 0.002993
+Epoch  17/200 | Train Obj: 7.8893 | Val Obj: 11.5546 | LR: 0.002990
+Epoch  18/200 | Train Obj: 7.7946 | Val Obj: 11.3338 | LR: 0.002987
+Epoch  19/200 | Train Obj: 7.6832 | Val Obj: 11.6467 | LR: 0.002983
+Epoch  20/200 | Train Obj: 7.5853 | Val Obj: 11.4886 | LR: 0.002980
+Epoch  21/200 | Train Obj: 7.4971 | Val Obj: 11.7232 | LR: 0.002975
+Epoch  22/200 | Train Obj: 7.3886 | Val Obj: 11.6644 | LR: 0.002971
+Epoch  23/200 | Train Obj: 7.3027 | Val Obj: 11.7290 | LR: 0.002965
+Epoch  24/200 | Train Obj: 7.2390 | Val Obj: 11.7786 | LR: 0.002960
+Epoch  25/200 | Train Obj: 7.1664 | Val Obj: 12.0751 | LR: 0.002954
+Epoch  26/200 | Train Obj: 7.0869 | Val Obj: 11.9626 | LR: 0.002948
+Epoch  27/200 | Train Obj: 7.0199 | Val Obj: 11.9796 | LR: 0.002941
+Early stopping.
+[ART] saved table: artifacts/tables/sign_mag_dependence_set1_seedS1001_seedM44_H6.csv and artifacts/tables/sign_mag_dependence_set1_seedS1001_seedM44_H6.tex
+[DM] Model vs Persist | DM=-11.078 | p=0 | mean(d)=-1.902038 (negative=better)
+[MBB] block=6 | CI95(mean d_model-pers)=[-2.132470,-1.362813]
+[MBB] block=12 | CI95(mean d_model-pers)=[-2.182317,-1.296945]
+[MBB] block=24 | CI95(mean d_model-pers)=[-2.260926,-1.235397]
+[MBB] block=6 | RMSE(flat) CI95=[1.606,1.794]
+[MBB] block=12 | RMSE(flat) CI95=[1.590,1.808]
+[MBB] block=24 | RMSE(flat) CI95=[1.555,1.847]
+
+===== GLOBAL TEST (JOINT; TEST cities; years > VAL) =====
+H=6 | RMSE(flat): 1.70 °C [1.65, 1.74] | MAE(flat): 1.23 °C [1.20, 1.25] | NLL(per-h): 1.8012 nats | EnergyScore(joint): 2.6094
+AVG over horizons | RMSE: 1.70 | MAE: 1.23 | CRPS: 0.8927 | Cov@95(avg): 95.2%
+Clim-0(flat)  | RMSE: 1.70 | MAE: 1.24
+Persist(flat) | RMSE: 2.19 | MAE: 1.57
+TinyTransformer(flat) | RMSE: 1.70 | MAE: 1.24 | train_sec: 49.6
+
+----- Per-horizon summary (h=1..H) -----
+h= 1 | RMSE=1.66 | MAE=1.18 | CRPS=0.8690 | Cov@95=93.5%
+h= 2 | RMSE=1.70 | MAE=1.22 | CRPS=0.8908 | Cov@95=95.3%
+h= 3 | RMSE=1.73 | MAE=1.25 | CRPS=0.9120 | Cov@95=94.3%
+h= 4 | RMSE=1.71 | MAE=1.24 | CRPS=0.9019 | Cov@95=95.5%
+h= 5 | RMSE=1.70 | MAE=1.23 | CRPS=0.8938 | Cov@95=96.2%
+h= 6 | RMSE=1.68 | MAE=1.23 | CRPS=0.8885 | Cov@95=96.2%
+
+----- Decade-wise (TEST; grouped by first horizon year) -----
+2000s | N=1080 | RMSE(flat)=1.59 | MAE(flat)=1.18 | CRPS(avg)=0.8510 | Cov@95(avg)=95.8%
+2010s | N=1150 | RMSE(flat)=1.78 | MAE(flat)=1.27 | CRPS(avg)=0.9317 | Cov@95(avg)=94.6%
+
+----- Regime-wise (TEST; grouped by first horizon year ranges) -----
+2001-2004 | N= 480 | RMSE(flat)=1.57 | MAE(flat)=1.15 | CRPS(avg)=0.8274 | Cov@95(avg)=96.0%
+2005-2007 | N= 360 | RMSE(flat)=1.63 | MAE(flat)=1.22 | CRPS(avg)=0.8750 | Cov@95(avg)=95.5%
+2008-2010 | N= 360 | RMSE(flat)=1.62 | MAE(flat)=1.19 | CRPS(avg)=0.8722 | Cov@95(avg)=95.8%
+2011-2014 | N= 480 | RMSE(flat)=1.68 | MAE(flat)=1.20 | CRPS(avg)=0.8743 | Cov@95(avg)=95.3%
+2015-2017 | N= 360 | RMSE(flat)=1.87 | MAE(flat)=1.37 | CRPS(avg)=1.0055 | Cov@95(avg)=93.4%
+2018-2020 | N= 190 | RMSE(flat)=1.94 | MAE(flat)=1.31 | CRPS(avg)=0.9624 | Cov@95(avg)=94.5%
+
+----- Per-city (eval cities; years > VAL) -----
+       City                            Region  N_test_windows RMSE (°C) MAE (°C) NLL (per-h) CRPS (°C)  CIA95 Cov@50 Cov@90 Cov@95  N_windows_in_test DM_vs_Persist      DM_p
+     Bangui                            Africa             223      0.57     0.43      0.8405    0.3229 94.89%  50.6%  99.2%  99.9%                223        -6.799 9.611e-11
+      Osaka                              Asia             223      1.33     1.09      1.7183    0.8025 97.65%  33.0%  90.4%  97.2%                223        -2.252   0.02532
+   Canberra           Australia/South Pacific             223      1.44     1.10      1.7569    0.8097 98.80%  37.9%  89.8%  95.7%                223        -8.775 4.441e-16
+     Lisbon                            Europe             223      1.44     1.20      1.7443    0.8360 96.31%  29.1%  93.0%  98.5%                223        -6.102 4.614e-09
+     Madrid                            Europe             223      1.76     1.44      1.9994    1.0315 96.66%  29.3%  83.2%  92.3%                223        -7.585 9.026e-13
+      Amman                       Middle East             223      1.58     1.23      1.9047    0.8859 98.46%  37.7%  88.6%  96.2%                223        -8.065 4.552e-14
+     Albany                     North America             223      2.05     1.58      2.1584    1.1461 97.16%  32.0%  82.9%  92.3%                223        -7.266 6.223e-12
+    Buffalo                     North America             223      2.13     1.64      2.2204    1.1849 97.08%  31.7%  83.3%  92.2%                223        -7.931 1.057e-13
+   Billings                     North America             223      2.79     2.04      2.7150    1.5308 92.36%  29.8%  76.5%  87.7%                223        -6.140 3.754e-09
+Tegucigalpa South/Central America & Carribean             223      0.65     0.51      0.9541    0.3763 95.13%  44.8%  97.8%  99.6%                223        -4.647 5.776e-06
+
+[DM] Per-city summary | significant(p<0.05): 10/10 | Fisher combined p=0
+Not enough models for epistemic on eval_set=1 (found 0).
+
+======================================================================
+RUN | seed_split: 1002 | seed_model: 42 | device: cpu | H=6
+======================================================================
+[DIAG] Available years: 1995..2020, cities: 321
+[DIAG] Time splits -> TRAIN<= 1999, VAL: 2000..2000, TEST: 2001..2020
+[DIAG] Horizon H=6
+/tmp/ipython-input-3828873912.py:286: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  for city, g in monthly.groupby("City", sort=False):
+[DIAG] Eval set id: 2 | eval_seed: 125
+[DIAG] Eval (TEST) cities: ['Banjul', 'Kuala Lumpur', 'Melbourne', 'Moscow', 'Oslo', 'Damascus', 'Akron Canton', 'Birmingham', 'Asheville', 'Paramaribo']
+[DIAG] Geographic split -> TRAIN cities: 280, VAL cities: 31, TEST cities: 10
+/tmp/ipython-input-3828873912.py:658: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  for city, g in df.groupby("City", sort=False):
+[DIAG] TRAIN samples: 11316
+[DIAG] VAL samples: 196
+[DIAG] TEST samples: 2131
+Epoch   1/200 | Train Obj: 11.7934 | Val Obj: 11.9951 | LR: 0.000600
+Epoch   2/200 | Train Obj: 10.1236 | Val Obj: 11.6894 | LR: 0.000900
+Epoch   3/200 | Train Obj: 9.6861 | Val Obj: 11.6087 | LR: 0.001200
+Epoch   4/200 | Train Obj: 9.4880 | Val Obj: 11.5344 | LR: 0.001500
+Epoch   5/200 | Train Obj: 9.3238 | Val Obj: 11.4482 | LR: 0.001800
+Epoch   6/200 | Train Obj: 9.1557 | Val Obj: 11.5002 | LR: 0.002100
+Epoch   7/200 | Train Obj: 9.0304 | Val Obj: 11.4737 | LR: 0.002400
+Epoch   8/200 | Train Obj: 8.9425 | Val Obj: 11.6371 | LR: 0.002700
+Epoch   9/200 | Train Obj: 8.8322 | Val Obj: 11.5247 | LR: 0.003000
+Epoch  10/200 | Train Obj: 8.7218 | Val Obj: 11.5669 | LR: 0.003000
+Epoch  11/200 | Train Obj: 8.5999 | Val Obj: 11.6378 | LR: 0.003000
+Epoch  12/200 | Train Obj: 8.4416 | Val Obj: 11.7465 | LR: 0.002999
+Epoch  13/200 | Train Obj: 8.3236 | Val Obj: 11.8066 | LR: 0.002998
+Epoch  14/200 | Train Obj: 8.1912 | Val Obj: 12.0455 | LR: 0.002997
+Epoch  15/200 | Train Obj: 8.0876 | Val Obj: 12.2128 | LR: 0.002995
+Epoch  16/200 | Train Obj: 7.9752 | Val Obj: 12.4940 | LR: 0.002993
+Epoch  17/200 | Train Obj: 7.8517 | Val Obj: 12.5172 | LR: 0.002990
+Epoch  18/200 | Train Obj: 7.7446 | Val Obj: 12.7547 | LR: 0.002987
+Epoch  19/200 | Train Obj: 7.6530 | Val Obj: 12.5746 | LR: 0.002983
+Epoch  20/200 | Train Obj: 7.5763 | Val Obj: 12.5942 | LR: 0.002980
+Epoch  21/200 | Train Obj: 7.4696 | Val Obj: 12.7595 | LR: 0.002975
+Epoch  22/200 | Train Obj: 7.3820 | Val Obj: 12.8962 | LR: 0.002971
+Epoch  23/200 | Train Obj: 7.2893 | Val Obj: 13.1074 | LR: 0.002965
+Epoch  24/200 | Train Obj: 7.2307 | Val Obj: 12.8055 | LR: 0.002960
+Epoch  25/200 | Train Obj: 7.1467 | Val Obj: 13.1378 | LR: 0.002954
+Early stopping.
+[ART] saved table: artifacts/tables/sign_mag_dependence_set2_seedS1002_seedM42_H6.csv and artifacts/tables/sign_mag_dependence_set2_seedS1002_seedM42_H6.tex
+[DM] Model vs Persist | DM=-13.886 | p=0 | mean(d)=-2.404757 (negative=better)
+[MBB] block=6 | CI95(mean d_model-pers)=[-2.646955,-1.851115]
+[MBB] block=12 | CI95(mean d_model-pers)=[-2.660626,-1.836026]
+[MBB] block=24 | CI95(mean d_model-pers)=[-2.772496,-1.750863]
+[MBB] block=6 | RMSE(flat) CI95=[1.660,1.851]
+[MBB] block=12 | RMSE(flat) CI95=[1.640,1.883]
+[MBB] block=24 | RMSE(flat) CI95=[1.593,1.926]
+
+===== GLOBAL TEST (JOINT; TEST cities; years > VAL) =====
+H=6 | RMSE(flat): 1.76 °C [1.71, 1.80] | MAE(flat): 1.23 °C [1.20, 1.26] | NLL(per-h): 1.7685 nats | EnergyScore(joint): 2.6540
+AVG over horizons | RMSE: 1.76 | MAE: 1.23 | CRPS: 0.9020 | Cov@95(avg): 95.8%
+Clim-0(flat)  | RMSE: 1.80 | MAE: 1.28
+Persist(flat) | RMSE: 2.34 | MAE: 1.64
+TinyTransformer(flat) | RMSE: 1.76 | MAE: 1.23 | train_sec: 44.2
+
+----- Per-horizon summary (h=1..H) -----
+h= 1 | RMSE=1.73 | MAE=1.20 | CRPS=0.8897 | Cov@95=95.0%
+h= 2 | RMSE=1.78 | MAE=1.24 | CRPS=0.9131 | Cov@95=95.5%
+h= 3 | RMSE=1.77 | MAE=1.24 | CRPS=0.9087 | Cov@95=95.6%
+h= 4 | RMSE=1.76 | MAE=1.23 | CRPS=0.8959 | Cov@95=96.2%
+h= 5 | RMSE=1.76 | MAE=1.23 | CRPS=0.9017 | Cov@95=96.3%
+h= 6 | RMSE=1.75 | MAE=1.21 | CRPS=0.9031 | Cov@95=96.3%
+
+----- Decade-wise (TEST; grouped by first horizon year) -----
+2000s | N= 993 | RMSE(flat)=1.71 | MAE(flat)=1.20 | CRPS(avg)=0.8760 | Cov@95(avg)=96.3%
+2010s | N=1138 | RMSE(flat)=1.79 | MAE(flat)=1.25 | CRPS(avg)=0.9248 | Cov@95(avg)=95.5%
+
+----- Regime-wise (TEST; grouped by first horizon year ranges) -----
+2001-2004 | N= 422 | RMSE(flat)=1.65 | MAE(flat)=1.18 | CRPS(avg)=0.8580 | Cov@95(avg)=96.8%
+2005-2007 | N= 355 | RMSE(flat)=1.77 | MAE(flat)=1.22 | CRPS(avg)=0.8922 | Cov@95(avg)=96.5%
+2008-2010 | N= 324 | RMSE(flat)=1.94 | MAE(flat)=1.32 | CRPS(avg)=0.9873 | Cov@95(avg)=93.4%
+2011-2014 | N= 480 | RMSE(flat)=1.71 | MAE(flat)=1.19 | CRPS(avg)=0.8680 | Cov@95(avg)=96.2%
+2015-2017 | N= 360 | RMSE(flat)=1.80 | MAE(flat)=1.29 | CRPS(avg)=0.9498 | Cov@95(avg)=96.0%
+2018-2020 | N= 190 | RMSE(flat)=1.65 | MAE(flat)=1.15 | CRPS(avg)=0.8680 | Cov@95(avg)=95.4%
+
+----- Per-city (eval cities; years > VAL) -----
+        City                            Region  N_test_windows RMSE (°C) MAE (°C) NLL (per-h) CRPS (°C)  CIA95 Cov@50 Cov@90 Cov@95  N_windows_in_test DM_vs_Persist      DM_p
+      Banjul                            Africa             149      0.80     0.58      1.1435    0.4282 95.09%  47.1%  97.2%  99.7%                149        -6.433 1.633e-09
+Kuala Lumpur                              Asia             223      0.59     0.47      0.8959    0.3567 94.74%  43.8%  99.3% 100.0%                223        -1.321    0.1878
+   Melbourne           Australia/South Pacific             223      1.00     0.79      1.4159    0.5971 96.23%  39.7%  95.4%  98.6%                223        -4.533 9.504e-06
+      Moscow                            Europe             223      2.92     2.33      2.7594    1.7243 91.42%  26.6%  74.8%  86.8%                223       -10.727         0
+        Oslo                            Europe             223      2.24     1.73      2.2674    1.2620 97.87%  32.1%  85.7%  93.0%                223       -10.185         0
+    Damascus                       Middle East             223      1.53     1.14      1.8067    0.8503 98.51%  41.9%  90.7%  96.4%                223        -6.374 1.049e-09
+Akron Canton                     North America             223      2.24     1.71      2.2789    1.2501 98.65%  33.9%  85.3%  93.7%                223        -8.632  1.11e-15
+  Birmingham                     North America             223      1.85     1.45      2.0358    1.0353 99.01%  34.3%  89.6%  95.8%                223        -9.123         0
+   Asheville                     North America             223      1.78     1.38      1.9907    0.9960 98.83%  36.3%  90.5%  96.1%                223        -8.079 4.152e-14
+  Paramaribo South/Central America & Carribean             198      0.49     0.38      0.7721    0.2951 94.74%  53.6%  99.7% 100.0%                198        -2.229   0.02698
+
+[DM] Per-city summary | significant(p<0.05): 9/10 | Fisher combined p=0
+
+======================================================================
+RUN | seed_split: 1002 | seed_model: 43 | device: cpu | H=6
+======================================================================
+[DIAG] Available years: 1995..2020, cities: 321
+[DIAG] Time splits -> TRAIN<= 1999, VAL: 2000..2000, TEST: 2001..2020
+[DIAG] Horizon H=6
+/tmp/ipython-input-3828873912.py:286: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  for city, g in monthly.groupby("City", sort=False):
+[DIAG] Eval set id: 2 | eval_seed: 125
+[DIAG] Eval (TEST) cities: ['Banjul', 'Kuala Lumpur', 'Melbourne', 'Moscow', 'Oslo', 'Damascus', 'Akron Canton', 'Birmingham', 'Asheville', 'Paramaribo']
+[DIAG] Geographic split -> TRAIN cities: 280, VAL cities: 31, TEST cities: 10
+/tmp/ipython-input-3828873912.py:658: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  for city, g in df.groupby("City", sort=False):
+[DIAG] TRAIN samples: 11316
+[DIAG] VAL samples: 196
+[DIAG] TEST samples: 2131
+Epoch   1/200 | Train Obj: 11.7398 | Val Obj: 11.7876 | LR: 0.000600
+Epoch   2/200 | Train Obj: 10.1074 | Val Obj: 11.7076 | LR: 0.000900
+Epoch   3/200 | Train Obj: 9.6460 | Val Obj: 11.7123 | LR: 0.001200
+Epoch   4/200 | Train Obj: 9.4794 | Val Obj: 11.6150 | LR: 0.001500
+Epoch   5/200 | Train Obj: 9.3415 | Val Obj: 11.4448 | LR: 0.001800
+Epoch   6/200 | Train Obj: 9.1977 | Val Obj: 11.3577 | LR: 0.002100
+Epoch   7/200 | Train Obj: 9.0815 | Val Obj: 11.3938 | LR: 0.002400
+Epoch   8/200 | Train Obj: 9.0055 | Val Obj: 11.4476 | LR: 0.002700
+Epoch   9/200 | Train Obj: 8.9007 | Val Obj: 11.4793 | LR: 0.003000
+Epoch  10/200 | Train Obj: 8.7918 | Val Obj: 11.5611 | LR: 0.003000
+Epoch  11/200 | Train Obj: 8.6408 | Val Obj: 11.8147 | LR: 0.003000
+Epoch  12/200 | Train Obj: 8.4921 | Val Obj: 11.8351 | LR: 0.002999
+Epoch  13/200 | Train Obj: 8.3545 | Val Obj: 11.7112 | LR: 0.002998
+Epoch  14/200 | Train Obj: 8.2277 | Val Obj: 11.9053 | LR: 0.002997
+Epoch  15/200 | Train Obj: 8.0837 | Val Obj: 12.0104 | LR: 0.002995
+Epoch  16/200 | Train Obj: 7.9645 | Val Obj: 12.1565 | LR: 0.002993
+Epoch  17/200 | Train Obj: 7.8469 | Val Obj: 12.1807 | LR: 0.002990
+Epoch  18/200 | Train Obj: 7.7515 | Val Obj: 12.3620 | LR: 0.002987
+Epoch  19/200 | Train Obj: 7.6427 | Val Obj: 12.4332 | LR: 0.002983
+Epoch  20/200 | Train Obj: 7.5549 | Val Obj: 12.4625 | LR: 0.002980
+Epoch  21/200 | Train Obj: 7.4654 | Val Obj: 12.4666 | LR: 0.002975
+Epoch  22/200 | Train Obj: 7.3922 | Val Obj: 12.5091 | LR: 0.002971
+Epoch  23/200 | Train Obj: 7.3049 | Val Obj: 12.7122 | LR: 0.002965
+Epoch  24/200 | Train Obj: 7.2433 | Val Obj: 12.6203 | LR: 0.002960
+Epoch  25/200 | Train Obj: 7.1785 | Val Obj: 12.8934 | LR: 0.002954
+Epoch  26/200 | Train Obj: 7.1165 | Val Obj: 12.7886 | LR: 0.002948
+Early stopping.
+[ART] saved table: artifacts/tables/sign_mag_dependence_set2_seedS1002_seedM43_H6.csv and artifacts/tables/sign_mag_dependence_set2_seedS1002_seedM43_H6.tex
+[DM] Model vs Persist | DM=-13.923 | p=0 | mean(d)=-2.402595 (negative=better)
+[MBB] block=6 | CI95(mean d_model-pers)=[-2.647955,-1.903243]
+[MBB] block=12 | CI95(mean d_model-pers)=[-2.701018,-1.877335]
+[MBB] block=24 | CI95(mean d_model-pers)=[-2.827560,-1.749840]
+[MBB] block=6 | RMSE(flat) CI95=[1.666,1.858]
+[MBB] block=12 | RMSE(flat) CI95=[1.627,1.883]
+[MBB] block=24 | RMSE(flat) CI95=[1.601,1.920]
+
+===== GLOBAL TEST (JOINT; TEST cities; years > VAL) =====
+H=6 | RMSE(flat): 1.76 °C [1.71, 1.80] | MAE(flat): 1.22 °C [1.19, 1.25] | NLL(per-h): 1.7572 nats | EnergyScore(joint): 2.6418
+AVG over horizons | RMSE: 1.76 | MAE: 1.22 | CRPS: 0.9008 | Cov@95(avg): 95.8%
+Clim-0(flat)  | RMSE: 1.80 | MAE: 1.28
+Persist(flat) | RMSE: 2.34 | MAE: 1.64
+TinyTransformer(flat) | RMSE: 1.76 | MAE: 1.23 | train_sec: 41.7
+
+----- Per-horizon summary (h=1..H) -----
+h= 1 | RMSE=1.73 | MAE=1.20 | CRPS=0.8869 | Cov@95=95.6%
+h= 2 | RMSE=1.79 | MAE=1.24 | CRPS=0.9131 | Cov@95=95.7%
+h= 3 | RMSE=1.78 | MAE=1.24 | CRPS=0.9107 | Cov@95=95.6%
+h= 4 | RMSE=1.75 | MAE=1.21 | CRPS=0.8990 | Cov@95=95.1%
+h= 5 | RMSE=1.75 | MAE=1.22 | CRPS=0.8950 | Cov@95=96.9%
+h= 6 | RMSE=1.75 | MAE=1.21 | CRPS=0.9004 | Cov@95=95.9%
+
+----- Decade-wise (TEST; grouped by first horizon year) -----
+2000s | N= 993 | RMSE(flat)=1.71 | MAE(flat)=1.19 | CRPS(avg)=0.8728 | Cov@95(avg)=96.3%
+2010s | N=1138 | RMSE(flat)=1.79 | MAE(flat)=1.25 | CRPS(avg)=0.9253 | Cov@95(avg)=95.4%
+
+----- Regime-wise (TEST; grouped by first horizon year ranges) -----
+2001-2004 | N= 422 | RMSE(flat)=1.65 | MAE(flat)=1.17 | CRPS(avg)=0.8526 | Cov@95(avg)=96.8%
+2005-2007 | N= 355 | RMSE(flat)=1.76 | MAE(flat)=1.21 | CRPS(avg)=0.8889 | Cov@95(avg)=96.2%
+2008-2010 | N= 324 | RMSE(flat)=1.96 | MAE(flat)=1.33 | CRPS(avg)=0.9924 | Cov@95(avg)=93.4%
+2011-2014 | N= 480 | RMSE(flat)=1.72 | MAE(flat)=1.19 | CRPS(avg)=0.8733 | Cov@95(avg)=96.0%
+2015-2017 | N= 360 | RMSE(flat)=1.79 | MAE(flat)=1.27 | CRPS(avg)=0.9446 | Cov@95(avg)=96.2%
+2018-2020 | N= 190 | RMSE(flat)=1.64 | MAE(flat)=1.14 | CRPS(avg)=0.8608 | Cov@95(avg)=95.9%
+
+----- Per-city (eval cities; years > VAL) -----
+        City                            Region  N_test_windows RMSE (°C) MAE (°C) NLL (per-h) CRPS (°C)  CIA95 Cov@50 Cov@90 Cov@95  N_windows_in_test DM_vs_Persist      DM_p
+      Banjul                            Africa             149      0.82     0.60      1.1407    0.4335 95.68%  44.9%  96.3%  99.1%                149        -6.147 6.987e-09
+Kuala Lumpur                              Asia             223      0.55     0.43      0.8049    0.3363 94.82%  47.3%  99.0%  99.9%                223        -2.878  0.004387
+   Melbourne           Australia/South Pacific             223      0.94     0.73      1.3775    0.5675 95.84%  43.3%  95.7%  99.0%                223        -6.474 6.043e-10
+      Moscow                            Europe             223      2.92     2.33      2.8504    1.7429 89.92%  23.9%  73.3%  85.4%                223       -10.998         0
+        Oslo                            Europe             223      2.23     1.72      2.2613    1.2552 97.53%  30.0%  86.5%  93.0%                223       -10.549         0
+    Damascus                       Middle East             223      1.53     1.15      1.8014    0.8507 97.88%  40.3%  91.5%  97.0%                223        -6.478 5.912e-10
+Akron Canton                     North America             223      2.26     1.73      2.2956    1.2638 98.40%  31.3%  85.4%  93.6%                223        -8.425 4.663e-15
+  Birmingham                     North America             223      1.87     1.46      2.0263    1.0442 98.99%  31.2%  89.8%  96.0%                223        -8.726 6.661e-16
+   Asheville                     North America             223      1.80     1.39      1.9837    1.0059 98.20%  33.3%  90.5%  96.7%                223        -7.867 1.577e-13
+  Paramaribo South/Central America & Carribean             198      0.48     0.37      0.7074    0.2843 94.74%  51.2%  99.7% 100.0%                198        -3.091  0.002282
+
+[DM] Per-city summary | significant(p<0.05): 10/10 | Fisher combined p=0
+
+======================================================================
+RUN | seed_split: 1002 | seed_model: 44 | device: cpu | H=6
+======================================================================
+[DIAG] Available years: 1995..2020, cities: 321
+[DIAG] Time splits -> TRAIN<= 1999, VAL: 2000..2000, TEST: 2001..2020
+[DIAG] Horizon H=6
+/tmp/ipython-input-3828873912.py:286: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  for city, g in monthly.groupby("City", sort=False):
+[DIAG] Eval set id: 2 | eval_seed: 125
+[DIAG] Eval (TEST) cities: ['Banjul', 'Kuala Lumpur', 'Melbourne', 'Moscow', 'Oslo', 'Damascus', 'Akron Canton', 'Birmingham', 'Asheville', 'Paramaribo']
+[DIAG] Geographic split -> TRAIN cities: 280, VAL cities: 31, TEST cities: 10
+/tmp/ipython-input-3828873912.py:658: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  for city, g in df.groupby("City", sort=False):
+[DIAG] TRAIN samples: 11316
+[DIAG] VAL samples: 196
+[DIAG] TEST samples: 2131
+Epoch   1/200 | Train Obj: 11.9100 | Val Obj: 12.5995 | LR: 0.000600
+Epoch   2/200 | Train Obj: 10.1318 | Val Obj: 11.7040 | LR: 0.000900
+Epoch   3/200 | Train Obj: 9.6439 | Val Obj: 11.8325 | LR: 0.001200
+Epoch   4/200 | Train Obj: 9.4861 | Val Obj: 11.7024 | LR: 0.001500
+Epoch   5/200 | Train Obj: 9.3431 | Val Obj: 11.5040 | LR: 0.001800
+Epoch   6/200 | Train Obj: 9.1941 | Val Obj: 11.4032 | LR: 0.002100
+Epoch   7/200 | Train Obj: 9.0829 | Val Obj: 11.4593 | LR: 0.002400
+Epoch   8/200 | Train Obj: 8.9583 | Val Obj: 11.5799 | LR: 0.002700
+Epoch   9/200 | Train Obj: 8.8637 | Val Obj: 11.6479 | LR: 0.003000
+Epoch  10/200 | Train Obj: 8.7646 | Val Obj: 11.8042 | LR: 0.003000
+Epoch  11/200 | Train Obj: 8.6495 | Val Obj: 11.7716 | LR: 0.003000
+Epoch  12/200 | Train Obj: 8.5190 | Val Obj: 11.8583 | LR: 0.002999
+Epoch  13/200 | Train Obj: 8.4049 | Val Obj: 12.0375 | LR: 0.002998
+Epoch  14/200 | Train Obj: 8.2761 | Val Obj: 12.2106 | LR: 0.002997
+Epoch  15/200 | Train Obj: 8.1635 | Val Obj: 12.2981 | LR: 0.002995
+Epoch  16/200 | Train Obj: 8.0611 | Val Obj: 12.4225 | LR: 0.002993
+Epoch  17/200 | Train Obj: 7.9307 | Val Obj: 12.5250 | LR: 0.002990
+Epoch  18/200 | Train Obj: 7.8552 | Val Obj: 12.5890 | LR: 0.002987
+Epoch  19/200 | Train Obj: 7.7475 | Val Obj: 12.4814 | LR: 0.002983
+Epoch  20/200 | Train Obj: 7.6597 | Val Obj: 12.6020 | LR: 0.002980
+Epoch  21/200 | Train Obj: 7.5728 | Val Obj: 12.8337 | LR: 0.002975
+Epoch  22/200 | Train Obj: 7.4896 | Val Obj: 12.6748 | LR: 0.002971
+Epoch  23/200 | Train Obj: 7.4052 | Val Obj: 12.7890 | LR: 0.002965
+Epoch  24/200 | Train Obj: 7.3345 | Val Obj: 12.9809 | LR: 0.002960
+Epoch  25/200 | Train Obj: 7.2687 | Val Obj: 12.6802 | LR: 0.002954
+Epoch  26/200 | Train Obj: 7.2087 | Val Obj: 12.9011 | LR: 0.002948
+Early stopping.
+[ART] saved table: artifacts/tables/sign_mag_dependence_set2_seedS1002_seedM44_H6.csv and artifacts/tables/sign_mag_dependence_set2_seedS1002_seedM44_H6.tex
+[DM] Model vs Persist | DM=-13.869 | p=0 | mean(d)=-2.379107 (negative=better)
+[MBB] block=6 | CI95(mean d_model-pers)=[-2.597843,-1.818951]
+[MBB] block=12 | CI95(mean d_model-pers)=[-2.601641,-1.774931]
+[MBB] block=24 | CI95(mean d_model-pers)=[-2.698073,-1.682506]
+[MBB] block=6 | RMSE(flat) CI95=[1.670,1.858]
+[MBB] block=12 | RMSE(flat) CI95=[1.642,1.896]
+[MBB] block=24 | RMSE(flat) CI95=[1.601,1.917]
+
+===== GLOBAL TEST (JOINT; TEST cities; years > VAL) =====
+H=6 | RMSE(flat): 1.76 °C [1.72, 1.81] | MAE(flat): 1.23 °C [1.20, 1.26] | NLL(per-h): 1.7545 nats | EnergyScore(joint): 2.6394
+AVG over horizons | RMSE: 1.76 | MAE: 1.23 | CRPS: 0.9073 | Cov@95(avg): 95.8%
+Clim-0(flat)  | RMSE: 1.80 | MAE: 1.28
+Persist(flat) | RMSE: 2.34 | MAE: 1.64
+TinyTransformer(flat) | RMSE: 1.76 | MAE: 1.23 | train_sec: 41.9
+
+----- Per-horizon summary (h=1..H) -----
+h= 1 | RMSE=1.74 | MAE=1.20 | CRPS=0.8884 | Cov@95=95.7%
+h= 2 | RMSE=1.80 | MAE=1.25 | CRPS=0.9147 | Cov@95=95.3%
+h= 3 | RMSE=1.78 | MAE=1.25 | CRPS=0.9170 | Cov@95=95.9%
+h= 4 | RMSE=1.76 | MAE=1.23 | CRPS=0.9061 | Cov@95=95.9%
+h= 5 | RMSE=1.75 | MAE=1.22 | CRPS=0.9070 | Cov@95=96.1%
+h= 6 | RMSE=1.75 | MAE=1.22 | CRPS=0.9109 | Cov@95=95.8%
+
+----- Decade-wise (TEST; grouped by first horizon year) -----
+2000s | N= 993 | RMSE(flat)=1.72 | MAE(flat)=1.20 | CRPS(avg)=0.8806 | Cov@95(avg)=96.3%
+2010s | N=1138 | RMSE(flat)=1.80 | MAE(flat)=1.25 | CRPS(avg)=0.9307 | Cov@95(avg)=95.3%
+
+----- Regime-wise (TEST; grouped by first horizon year ranges) -----
+2001-2004 | N= 422 | RMSE(flat)=1.66 | MAE(flat)=1.19 | CRPS(avg)=0.8632 | Cov@95(avg)=96.7%
+2005-2007 | N= 355 | RMSE(flat)=1.77 | MAE(flat)=1.21 | CRPS(avg)=0.8918 | Cov@95(avg)=96.5%
+2008-2010 | N= 324 | RMSE(flat)=1.98 | MAE(flat)=1.35 | CRPS(avg)=1.0037 | Cov@95(avg)=93.1%
+2011-2014 | N= 480 | RMSE(flat)=1.72 | MAE(flat)=1.19 | CRPS(avg)=0.8744 | Cov@95(avg)=96.4%
+2015-2017 | N= 360 | RMSE(flat)=1.79 | MAE(flat)=1.28 | CRPS(avg)=0.9510 | Cov@95(avg)=95.5%
+2018-2020 | N= 190 | RMSE(flat)=1.65 | MAE(flat)=1.16 | CRPS(avg)=0.8705 | Cov@95(avg)=96.0%
+
+----- Per-city (eval cities; years > VAL) -----
+        City                            Region  N_test_windows RMSE (°C) MAE (°C) NLL (per-h) CRPS (°C)  CIA95 Cov@50 Cov@90 Cov@95  N_windows_in_test DM_vs_Persist      DM_p
+      Banjul                            Africa             149      0.83     0.61      1.1329    0.4358 95.91%  39.5%  95.7%  98.9%                149        -6.275  3.66e-09
+Kuala Lumpur                              Asia             223      0.58     0.45      0.8014    0.3496 94.74%  34.5%  97.8% 100.0%                223        -1.763   0.07927
+   Melbourne           Australia/South Pacific             223      0.97     0.76      1.4050    0.5939 96.23%  35.0%  94.1%  98.6%                223        -5.283 3.023e-07
+      Moscow                            Europe             223      2.91     2.32      2.8103    1.7309 90.87%  23.3%  74.6%  86.3%                223       -11.019         0
+        Oslo                            Europe             223      2.23     1.72      2.2694    1.2593 97.87%  30.7%  86.8%  93.0%                223       -10.778         0
+    Damascus                       Middle East             223      1.55     1.16      1.8224    0.8606 98.51%  38.9%  90.7%  96.4%                223        -6.539 4.212e-10
+Akron Canton                     North America             223      2.28     1.74      2.2915    1.2686 98.50%  31.0%  85.7%  93.6%                223        -8.526  2.22e-15
+  Birmingham                     North America             223      1.87     1.46      2.0222    1.0510 98.67%  30.7%  89.7%  96.3%                223        -8.606 1.332e-15
+   Asheville                     North America             223      1.81     1.39      1.9944    1.0121 98.46%  33.5%  90.3%  96.3%                223        -8.101 3.619e-14
+  Paramaribo South/Central America & Carribean             198      0.49     0.37      0.6674    0.2855 94.74%  39.2%  99.7% 100.0%                198        -2.660   0.00845
+
+[DM] Per-city summary | significant(p<0.05): 9/10 | Fisher combined p=0
+Not enough models for epistemic on eval_set=2 (found 0).
+
+======================================================================
+RUN | seed_split: 1003 | seed_model: 42 | device: cpu | H=6
+======================================================================
+[DIAG] Available years: 1995..2020, cities: 321
+[DIAG] Time splits -> TRAIN<= 1999, VAL: 2000..2000, TEST: 2001..2020
+[DIAG] Horizon H=6
+/tmp/ipython-input-3828873912.py:286: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  for city, g in monthly.groupby("City", sort=False):
+[DIAG] Eval set id: 3 | eval_seed: 126
+[DIAG] Eval (TEST) cities: ['Dakar', 'Singapore', 'Brisbane', 'Budapest', 'Minsk', 'Abu Dhabi', 'Boise', 'Albuquerque', 'Cheyenne', 'Sao Paulo']
+[DIAG] Geographic split -> TRAIN cities: 280, VAL cities: 31, TEST cities: 10
+/tmp/ipython-input-3828873912.py:658: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  for city, g in df.groupby("City", sort=False):
+[DIAG] TRAIN samples: 11207
+[DIAG] VAL samples: 207
+[DIAG] TEST samples: 2230
+Epoch   1/200 | Train Obj: 12.0693 | Val Obj: 9.8259 | LR: 0.000600
+Epoch   2/200 | Train Obj: 10.2905 | Val Obj: 9.4063 | LR: 0.000900
+Epoch   3/200 | Train Obj: 9.8246 | Val Obj: 9.1949 | LR: 0.001200
+Epoch   4/200 | Train Obj: 9.6325 | Val Obj: 9.0765 | LR: 0.001500
+Epoch   5/200 | Train Obj: 9.4667 | Val Obj: 8.9637 | LR: 0.001800
+Epoch   6/200 | Train Obj: 9.3359 | Val Obj: 8.9357 | LR: 0.002100
+Epoch   7/200 | Train Obj: 9.1998 | Val Obj: 8.7969 | LR: 0.002400
+Epoch   8/200 | Train Obj: 9.0973 | Val Obj: 8.8667 | LR: 0.002700
+Epoch   9/200 | Train Obj: 8.9871 | Val Obj: 8.8504 | LR: 0.003000
+Epoch  10/200 | Train Obj: 8.8839 | Val Obj: 8.9828 | LR: 0.003000
+Epoch  11/200 | Train Obj: 8.7424 | Val Obj: 9.0112 | LR: 0.003000
+Epoch  12/200 | Train Obj: 8.5979 | Val Obj: 9.0158 | LR: 0.002999
+Epoch  13/200 | Train Obj: 8.4617 | Val Obj: 9.0149 | LR: 0.002998
+Epoch  14/200 | Train Obj: 8.3231 | Val Obj: 9.1249 | LR: 0.002997
+Epoch  15/200 | Train Obj: 8.1898 | Val Obj: 9.2274 | LR: 0.002995
+Epoch  16/200 | Train Obj: 8.0675 | Val Obj: 9.2551 | LR: 0.002993
+Epoch  17/200 | Train Obj: 7.9573 | Val Obj: 9.2511 | LR: 0.002990
+Epoch  18/200 | Train Obj: 7.8395 | Val Obj: 9.3872 | LR: 0.002987
+Epoch  19/200 | Train Obj: 7.7571 | Val Obj: 9.4001 | LR: 0.002983
+Epoch  20/200 | Train Obj: 7.6568 | Val Obj: 9.5267 | LR: 0.002980
+Epoch  21/200 | Train Obj: 7.5525 | Val Obj: 9.4520 | LR: 0.002975
+Epoch  22/200 | Train Obj: 7.4842 | Val Obj: 9.5300 | LR: 0.002971
+Epoch  23/200 | Train Obj: 7.3849 | Val Obj: 9.6058 | LR: 0.002965
+Epoch  24/200 | Train Obj: 7.3056 | Val Obj: 9.5176 | LR: 0.002960
+Epoch  25/200 | Train Obj: 7.2308 | Val Obj: 9.5300 | LR: 0.002954
+Epoch  26/200 | Train Obj: 7.1752 | Val Obj: 9.5565 | LR: 0.002948
+Epoch  27/200 | Train Obj: 7.1150 | Val Obj: 9.7178 | LR: 0.002941
+Early stopping.
+[ART] saved table: artifacts/tables/sign_mag_dependence_set3_seedS1003_seedM42_H6.csv and artifacts/tables/sign_mag_dependence_set3_seedS1003_seedM42_H6.tex
+[DM] Model vs Persist | DM=-12.993 | p=0 | mean(d)=-1.831871 (negative=better)
+[MBB] block=6 | CI95(mean d_model-pers)=[-2.101547,-1.493443]
+[MBB] block=12 | CI95(mean d_model-pers)=[-2.148696,-1.450053]
+[MBB] block=24 | CI95(mean d_model-pers)=[-2.227434,-1.394312]
+[MBB] block=6 | RMSE(flat) CI95=[1.590,1.765]
+[MBB] block=12 | RMSE(flat) CI95=[1.567,1.781]
+[MBB] block=24 | RMSE(flat) CI95=[1.545,1.819]
+
+===== GLOBAL TEST (JOINT; TEST cities; years > VAL) =====
+H=6 | RMSE(flat): 1.68 °C [1.64, 1.72] | MAE(flat): 1.22 °C [1.19, 1.25] | NLL(per-h): 1.7708 nats | EnergyScore(joint): 2.5638
+AVG over horizons | RMSE: 1.68 | MAE: 1.22 | CRPS: 0.8810 | Cov@95(avg): 92.9%
+Clim-0(flat)  | RMSE: 1.67 | MAE: 1.22
+Persist(flat) | RMSE: 2.16 | MAE: 1.53
+TinyTransformer(flat) | RMSE: 1.63 | MAE: 1.18 | train_sec: 43.0
+
+----- Per-horizon summary (h=1..H) -----
+h= 1 | RMSE=1.63 | MAE=1.18 | CRPS=0.8546 | Cov@95=93.5%
+h= 2 | RMSE=1.69 | MAE=1.22 | CRPS=0.8798 | Cov@95=93.5%
+h= 3 | RMSE=1.69 | MAE=1.23 | CRPS=0.8891 | Cov@95=92.4%
+h= 4 | RMSE=1.69 | MAE=1.23 | CRPS=0.8965 | Cov@95=91.7%
+h= 5 | RMSE=1.69 | MAE=1.22 | CRPS=0.8852 | Cov@95=93.7%
+h= 6 | RMSE=1.68 | MAE=1.21 | CRPS=0.8808 | Cov@95=92.8%
+
+----- Decade-wise (TEST; grouped by first horizon year) -----
+2000s | N=1080 | RMSE(flat)=1.64 | MAE(flat)=1.18 | CRPS(avg)=0.8561 | Cov@95(avg)=92.6%
+2010s | N=1150 | RMSE(flat)=1.72 | MAE(flat)=1.25 | CRPS(avg)=0.9044 | Cov@95(avg)=93.2%
+
+----- Regime-wise (TEST; grouped by first horizon year ranges) -----
+2001-2004 | N= 480 | RMSE(flat)=1.68 | MAE(flat)=1.21 | CRPS(avg)=0.8759 | Cov@95(avg)=93.0%
+2005-2007 | N= 360 | RMSE(flat)=1.73 | MAE(flat)=1.25 | CRPS(avg)=0.9020 | Cov@95(avg)=91.3%
+2008-2010 | N= 360 | RMSE(flat)=1.48 | MAE(flat)=1.07 | CRPS(avg)=0.7814 | Cov@95(avg)=93.8%
+2011-2014 | N= 480 | RMSE(flat)=1.74 | MAE(flat)=1.21 | CRPS(avg)=0.8827 | Cov@95(avg)=92.9%
+2015-2017 | N= 360 | RMSE(flat)=1.73 | MAE(flat)=1.28 | CRPS(avg)=0.9346 | Cov@95(avg)=93.3%
+2018-2020 | N= 190 | RMSE(flat)=1.66 | MAE(flat)=1.31 | CRPS(avg)=0.9370 | Cov@95(avg)=93.6%
+
+----- Per-city (eval cities; years > VAL) -----
+       City                            Region  N_test_windows RMSE (°C) MAE (°C) NLL (per-h) CRPS (°C)  CIA95 Cov@50 Cov@90 Cov@95  N_windows_in_test DM_vs_Persist      DM_p
+      Dakar                            Africa             223      0.86     0.66      1.1586    0.4741 98.36%  38.3%  91.4%  96.6%                223        -6.124   4.1e-09
+  Singapore                              Asia             223      0.46     0.35      0.6302    0.2642 94.97%  55.5%  98.7%  99.8%                223        -4.406 1.638e-05
+   Brisbane           Australia/South Pacific             223      0.84     0.69      1.2631    0.4953 97.57%  36.6%  91.3%  97.3%                223        -4.524 9.869e-06
+   Budapest                            Europe             223      2.07     1.65      2.2288    1.1974 95.98%  29.7%  82.6%  91.2%                223        -5.886 1.451e-08
+      Minsk                            Europe             223      2.61     2.06      2.5861    1.5176 88.98%  29.4%  73.5%  84.5%                223        -9.553         0
+  Abu Dhabi                       Middle East             223      1.05     0.82      1.4602    0.5995 99.11%  38.4%  88.6%  95.4%                223        -3.027  0.002758
+      Boise                     North America             223      2.35     1.86      2.3702    1.3549 91.81%  31.2%  77.2%  87.2%                223        -6.053     6e-09
+Albuquerque                     North America             223      1.66     1.34      1.9830    0.9546 97.00%  35.9%  84.8%  92.2%                223        -8.732 6.661e-16
+   Cheyenne                     North America             223      2.12     1.74      2.3169    1.2467 94.25%  29.4%  80.4%  89.5%                223        -8.890  2.22e-16
+  Sao Paulo South/Central America & Carribean             223      1.24     0.99      1.7108    0.7059 99.03%  39.0%  88.6%  95.5%                223        -8.700 8.882e-16
+
+[DM] Per-city summary | significant(p<0.05): 10/10 | Fisher combined p=0
+
+======================================================================
+RUN | seed_split: 1003 | seed_model: 43 | device: cpu | H=6
+======================================================================
+[DIAG] Available years: 1995..2020, cities: 321
+[DIAG] Time splits -> TRAIN<= 1999, VAL: 2000..2000, TEST: 2001..2020
+[DIAG] Horizon H=6
+/tmp/ipython-input-3828873912.py:286: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  for city, g in monthly.groupby("City", sort=False):
+[DIAG] Eval set id: 3 | eval_seed: 126
+[DIAG] Eval (TEST) cities: ['Dakar', 'Singapore', 'Brisbane', 'Budapest', 'Minsk', 'Abu Dhabi', 'Boise', 'Albuquerque', 'Cheyenne', 'Sao Paulo']
+[DIAG] Geographic split -> TRAIN cities: 280, VAL cities: 31, TEST cities: 10
+/tmp/ipython-input-3828873912.py:658: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  for city, g in df.groupby("City", sort=False):
+[DIAG] TRAIN samples: 11207
+[DIAG] VAL samples: 207
+[DIAG] TEST samples: 2230
+Epoch   1/200 | Train Obj: 12.0194 | Val Obj: 9.7666 | LR: 0.000600
+Epoch   2/200 | Train Obj: 10.2808 | Val Obj: 9.4143 | LR: 0.000900
+Epoch   3/200 | Train Obj: 9.7982 | Val Obj: 9.2206 | LR: 0.001200
+Epoch   4/200 | Train Obj: 9.6282 | Val Obj: 9.1030 | LR: 0.001500
+Epoch   5/200 | Train Obj: 9.4900 | Val Obj: 8.9364 | LR: 0.001800
+Epoch   6/200 | Train Obj: 9.3612 | Val Obj: 8.8440 | LR: 0.002100
+Epoch   7/200 | Train Obj: 9.2266 | Val Obj: 8.7881 | LR: 0.002400
+Epoch   8/200 | Train Obj: 9.1156 | Val Obj: 8.8158 | LR: 0.002700
+Epoch   9/200 | Train Obj: 9.0077 | Val Obj: 8.9011 | LR: 0.003000
+Epoch  10/200 | Train Obj: 8.8905 | Val Obj: 8.9143 | LR: 0.003000
+Epoch  11/200 | Train Obj: 8.7237 | Val Obj: 8.9328 | LR: 0.003000
+Epoch  12/200 | Train Obj: 8.5601 | Val Obj: 9.0573 | LR: 0.002999
+Epoch  13/200 | Train Obj: 8.4135 | Val Obj: 8.9153 | LR: 0.002998
+Epoch  14/200 | Train Obj: 8.2659 | Val Obj: 9.2327 | LR: 0.002997
+Epoch  15/200 | Train Obj: 8.1459 | Val Obj: 9.1927 | LR: 0.002995
+Epoch  16/200 | Train Obj: 8.0298 | Val Obj: 9.2494 | LR: 0.002993
+Epoch  17/200 | Train Obj: 7.9167 | Val Obj: 9.2759 | LR: 0.002990
+Epoch  18/200 | Train Obj: 7.7900 | Val Obj: 9.3431 | LR: 0.002987
+Epoch  19/200 | Train Obj: 7.7040 | Val Obj: 9.4299 | LR: 0.002983
+Epoch  20/200 | Train Obj: 7.6251 | Val Obj: 9.3653 | LR: 0.002980
+Epoch  21/200 | Train Obj: 7.5157 | Val Obj: 9.3138 | LR: 0.002975
+Epoch  22/200 | Train Obj: 7.4257 | Val Obj: 9.4696 | LR: 0.002971
+Epoch  23/200 | Train Obj: 7.3587 | Val Obj: 9.4968 | LR: 0.002965
+Epoch  24/200 | Train Obj: 7.2843 | Val Obj: 9.6069 | LR: 0.002960
+Epoch  25/200 | Train Obj: 7.2043 | Val Obj: 9.6886 | LR: 0.002954
+Epoch  26/200 | Train Obj: 7.1495 | Val Obj: 9.6188 | LR: 0.002948
+Epoch  27/200 | Train Obj: 7.0689 | Val Obj: 9.5917 | LR: 0.002941
+Early stopping.
+[ART] saved table: artifacts/tables/sign_mag_dependence_set3_seedS1003_seedM43_H6.csv and artifacts/tables/sign_mag_dependence_set3_seedS1003_seedM43_H6.tex
+[DM] Model vs Persist | DM=-13.523 | p=0 | mean(d)=-1.931417 (negative=better)
+[MBB] block=6 | CI95(mean d_model-pers)=[-2.188162,-1.544390]
+[MBB] block=12 | CI95(mean d_model-pers)=[-2.232791,-1.513611]
+[MBB] block=24 | CI95(mean d_model-pers)=[-2.307967,-1.466296]
+[MBB] block=6 | RMSE(flat) CI95=[1.565,1.739]
+[MBB] block=12 | RMSE(flat) CI95=[1.547,1.755]
+[MBB] block=24 | RMSE(flat) CI95=[1.506,1.794]
+
+===== GLOBAL TEST (JOINT; TEST cities; years > VAL) =====
+H=6 | RMSE(flat): 1.65 °C [1.61, 1.69] | MAE(flat): 1.20 °C [1.17, 1.22] | NLL(per-h): 1.7610 nats | EnergyScore(joint): 2.5258
+AVG over horizons | RMSE: 1.65 | MAE: 1.20 | CRPS: 0.8677 | Cov@95(avg): 92.7%
+Clim-0(flat)  | RMSE: 1.67 | MAE: 1.22
+Persist(flat) | RMSE: 2.16 | MAE: 1.53
+TinyTransformer(flat) | RMSE: 1.63 | MAE: 1.18 | train_sec: 41.9
+
+----- Per-horizon summary (h=1..H) -----
+h= 1 | RMSE=1.59 | MAE=1.14 | CRPS=0.8179 | Cov@95=95.2%
+h= 2 | RMSE=1.64 | MAE=1.19 | CRPS=0.8510 | Cov@95=94.4%
+h= 3 | RMSE=1.65 | MAE=1.20 | CRPS=0.8712 | Cov@95=91.4%
+h= 4 | RMSE=1.67 | MAE=1.21 | CRPS=0.8878 | Cov@95=91.1%
+h= 5 | RMSE=1.68 | MAE=1.22 | CRPS=0.8930 | Cov@95=91.7%
+h= 6 | RMSE=1.67 | MAE=1.21 | CRPS=0.8851 | Cov@95=92.4%
+
+----- Decade-wise (TEST; grouped by first horizon year) -----
+2000s | N=1080 | RMSE(flat)=1.60 | MAE(flat)=1.16 | CRPS(avg)=0.8407 | Cov@95(avg)=92.6%
+2010s | N=1150 | RMSE(flat)=1.69 | MAE(flat)=1.23 | CRPS(avg)=0.8930 | Cov@95(avg)=92.8%
+
+----- Regime-wise (TEST; grouped by first horizon year ranges) -----
+2001-2004 | N= 480 | RMSE(flat)=1.64 | MAE(flat)=1.19 | CRPS(avg)=0.8628 | Cov@95(avg)=92.3%
+2005-2007 | N= 360 | RMSE(flat)=1.68 | MAE(flat)=1.21 | CRPS(avg)=0.8790 | Cov@95(avg)=91.6%
+2008-2010 | N= 360 | RMSE(flat)=1.45 | MAE(flat)=1.06 | CRPS(avg)=0.7700 | Cov@95(avg)=94.5%
+2011-2014 | N= 480 | RMSE(flat)=1.72 | MAE(flat)=1.20 | CRPS(avg)=0.8752 | Cov@95(avg)=92.7%
+2015-2017 | N= 360 | RMSE(flat)=1.72 | MAE(flat)=1.28 | CRPS(avg)=0.9240 | Cov@95(avg)=92.5%
+2018-2020 | N= 190 | RMSE(flat)=1.63 | MAE(flat)=1.28 | CRPS(avg)=0.9179 | Cov@95(avg)=93.0%
+
+----- Per-city (eval cities; years > VAL) -----
+       City                            Region  N_test_windows RMSE (°C) MAE (°C) NLL (per-h) CRPS (°C)  CIA95 Cov@50 Cov@90 Cov@95  N_windows_in_test DM_vs_Persist      DM_p
+      Dakar                            Africa             223      0.85     0.65      1.1312    0.4669 97.65%  44.7%  92.8%  97.2%                223        -6.305 1.537e-09
+  Singapore                              Asia             223      0.45     0.35      0.6522    0.2655 94.74%  58.1%  99.1% 100.0%                223        -4.825 2.601e-06
+   Brisbane           Australia/South Pacific             223      0.82     0.67      1.2521    0.4834 95.92%  40.0%  93.4%  98.9%                223        -5.311 2.645e-07
+   Budapest                            Europe             223      2.05     1.63      2.2159    1.1886 94.33%  30.3%  80.3%  89.6%                223        -5.949 1.038e-08
+      Minsk                            Europe             223      2.58     2.05      2.6251    1.5147 87.17%  28.4%  71.9%  82.8%                223        -9.513         0
+  Abu Dhabi                       Middle East             223      1.03     0.81      1.4115    0.5858 98.36%  42.6%  91.3%  96.6%                223        -3.389  0.000831
+      Boise                     North America             223      2.28     1.80      2.3875    1.3152 90.32%  30.2%  76.0%  85.8%                223        -6.544 4.084e-10
+Albuquerque                     North America             223      1.63     1.31      1.9584    0.9372 96.66%  35.7%  84.3%  91.9%                223        -9.015  2.22e-16
+   Cheyenne                     North America             223      2.08     1.71      2.3137    1.2264 93.07%  29.9%  78.0%  88.4%                223        -9.556         0
+  Sao Paulo South/Central America & Carribean             223      1.22     0.98      1.6618    0.6929 98.72%  41.0%  89.4%  96.0%                223        -8.802 4.441e-16
+
+[DM] Per-city summary | significant(p<0.05): 10/10 | Fisher combined p=0
+
+======================================================================
+RUN | seed_split: 1003 | seed_model: 44 | device: cpu | H=6
+======================================================================
+[DIAG] Available years: 1995..2020, cities: 321
+[DIAG] Time splits -> TRAIN<= 1999, VAL: 2000..2000, TEST: 2001..2020
+[DIAG] Horizon H=6
+/tmp/ipython-input-3828873912.py:286: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  for city, g in monthly.groupby("City", sort=False):
+[DIAG] Eval set id: 3 | eval_seed: 126
+[DIAG] Eval (TEST) cities: ['Dakar', 'Singapore', 'Brisbane', 'Budapest', 'Minsk', 'Abu Dhabi', 'Boise', 'Albuquerque', 'Cheyenne', 'Sao Paulo']
+[DIAG] Geographic split -> TRAIN cities: 280, VAL cities: 31, TEST cities: 10
+/tmp/ipython-input-3828873912.py:658: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  for city, g in df.groupby("City", sort=False):
+[DIAG] TRAIN samples: 11207
+[DIAG] VAL samples: 207
+[DIAG] TEST samples: 2230
+Epoch   1/200 | Train Obj: 12.2060 | Val Obj: 9.9764 | LR: 0.000600
+Epoch   2/200 | Train Obj: 10.3175 | Val Obj: 9.3123 | LR: 0.000900
+Epoch   3/200 | Train Obj: 9.7910 | Val Obj: 9.1494 | LR: 0.001200
+Epoch   4/200 | Train Obj: 9.6444 | Val Obj: 9.0192 | LR: 0.001500
+Epoch   5/200 | Train Obj: 9.4990 | Val Obj: 8.8777 | LR: 0.001800
+Epoch   6/200 | Train Obj: 9.3665 | Val Obj: 8.8608 | LR: 0.002100
+Epoch   7/200 | Train Obj: 9.2489 | Val Obj: 8.7900 | LR: 0.002400
+Epoch   8/200 | Train Obj: 9.1588 | Val Obj: 8.8491 | LR: 0.002700
+Epoch   9/200 | Train Obj: 9.0419 | Val Obj: 8.9202 | LR: 0.003000
+Epoch  10/200 | Train Obj: 8.9293 | Val Obj: 9.0372 | LR: 0.003000
+Epoch  11/200 | Train Obj: 8.7978 | Val Obj: 9.1347 | LR: 0.003000
+Epoch  12/200 | Train Obj: 8.6610 | Val Obj: 9.2426 | LR: 0.002999
+Epoch  13/200 | Train Obj: 8.5176 | Val Obj: 9.1075 | LR: 0.002998
+Epoch  14/200 | Train Obj: 8.3697 | Val Obj: 9.2126 | LR: 0.002997
+Epoch  15/200 | Train Obj: 8.2535 | Val Obj: 9.3062 | LR: 0.002995
+Epoch  16/200 | Train Obj: 8.1482 | Val Obj: 9.3574 | LR: 0.002993
+Epoch  17/200 | Train Obj: 8.0294 | Val Obj: 9.5325 | LR: 0.002990
+Epoch  18/200 | Train Obj: 7.9223 | Val Obj: 9.6033 | LR: 0.002987
+Epoch  19/200 | Train Obj: 7.8245 | Val Obj: 9.6317 | LR: 0.002983
+Epoch  20/200 | Train Obj: 7.7201 | Val Obj: 9.6446 | LR: 0.002980
+Epoch  21/200 | Train Obj: 7.6359 | Val Obj: 9.6581 | LR: 0.002975
+Epoch  22/200 | Train Obj: 7.5605 | Val Obj: 9.6687 | LR: 0.002971
+Epoch  23/200 | Train Obj: 7.4687 | Val Obj: 9.8151 | LR: 0.002965
+Epoch  24/200 | Train Obj: 7.3963 | Val Obj: 9.7041 | LR: 0.002960
+Epoch  25/200 | Train Obj: 7.3101 | Val Obj: 9.7321 | LR: 0.002954
+Epoch  26/200 | Train Obj: 7.2513 | Val Obj: 9.8123 | LR: 0.002948
+Epoch  27/200 | Train Obj: 7.1684 | Val Obj: 9.9406 | LR: 0.002941
+Early stopping.
+[ART] saved table: artifacts/tables/sign_mag_dependence_set3_seedS1003_seedM44_H6.csv and artifacts/tables/sign_mag_dependence_set3_seedS1003_seedM44_H6.tex
+[DM] Model vs Persist | DM=-13.325 | p=0 | mean(d)=-1.894693 (negative=better)
+[MBB] block=6 | CI95(mean d_model-pers)=[-2.197932,-1.563490]
+[MBB] block=12 | CI95(mean d_model-pers)=[-2.213060,-1.531010]
+[MBB] block=24 | CI95(mean d_model-pers)=[-2.324342,-1.428679]
+[MBB] block=6 | RMSE(flat) CI95=[1.574,1.761]
+[MBB] block=12 | RMSE(flat) CI95=[1.544,1.770]
+[MBB] block=24 | RMSE(flat) CI95=[1.525,1.806]
+
+===== GLOBAL TEST (JOINT; TEST cities; years > VAL) =====
+H=6 | RMSE(flat): 1.66 °C [1.62, 1.70] | MAE(flat): 1.20 °C [1.17, 1.23] | NLL(per-h): 1.7474 nats | EnergyScore(joint): 2.5374
+AVG over horizons | RMSE: 1.66 | MAE: 1.20 | CRPS: 0.8705 | Cov@95(avg): 92.1%
+Clim-0(flat)  | RMSE: 1.67 | MAE: 1.22
+Persist(flat) | RMSE: 2.16 | MAE: 1.53
+TinyTransformer(flat) | RMSE: 1.63 | MAE: 1.18 | train_sec: 41.5
+
+----- Per-horizon summary (h=1..H) -----
+h= 1 | RMSE=1.62 | MAE=1.17 | CRPS=0.8383 | Cov@95=93.7%
+h= 2 | RMSE=1.66 | MAE=1.20 | CRPS=0.8699 | Cov@95=92.1%
+h= 3 | RMSE=1.67 | MAE=1.22 | CRPS=0.8786 | Cov@95=92.4%
+h= 4 | RMSE=1.66 | MAE=1.21 | CRPS=0.8771 | Cov@95=91.8%
+h= 5 | RMSE=1.69 | MAE=1.22 | CRPS=0.8863 | Cov@95=92.2%
+h= 6 | RMSE=1.66 | MAE=1.20 | CRPS=0.8730 | Cov@95=90.5%
+
+----- Decade-wise (TEST; grouped by first horizon year) -----
+2000s | N=1080 | RMSE(flat)=1.62 | MAE(flat)=1.17 | CRPS(avg)=0.8464 | Cov@95(avg)=92.4%
+2010s | N=1150 | RMSE(flat)=1.70 | MAE(flat)=1.24 | CRPS(avg)=0.8932 | Cov@95(avg)=91.8%
+
+----- Regime-wise (TEST; grouped by first horizon year ranges) -----
+2001-2004 | N= 480 | RMSE(flat)=1.65 | MAE(flat)=1.20 | CRPS(avg)=0.8642 | Cov@95(avg)=92.3%
+2005-2007 | N= 360 | RMSE(flat)=1.71 | MAE(flat)=1.23 | CRPS(avg)=0.8911 | Cov@95(avg)=91.3%
+2008-2010 | N= 360 | RMSE(flat)=1.46 | MAE(flat)=1.06 | CRPS(avg)=0.7706 | Cov@95(avg)=93.9%
+2011-2014 | N= 480 | RMSE(flat)=1.72 | MAE(flat)=1.20 | CRPS(avg)=0.8718 | Cov@95(avg)=92.1%
+2015-2017 | N= 360 | RMSE(flat)=1.72 | MAE(flat)=1.28 | CRPS(avg)=0.9261 | Cov@95(avg)=91.1%
+2018-2020 | N= 190 | RMSE(flat)=1.67 | MAE(flat)=1.31 | CRPS(avg)=0.9284 | Cov@95(avg)=91.9%
+
+----- Per-city (eval cities; years > VAL) -----
+       City                            Region  N_test_windows RMSE (°C) MAE (°C) NLL (per-h) CRPS (°C)  CIA95 Cov@50 Cov@90 Cov@95  N_windows_in_test DM_vs_Persist      DM_p
+      Dakar                            Africa             223      0.85     0.65      1.1406    0.4653 98.20%  48.1%  92.1%  96.7%                223        -6.422 8.074e-10
+  Singapore                              Asia             223      0.45     0.35      0.6449    0.2626 95.05%  60.6%  98.4%  99.7%                223        -5.477 1.167e-07
+   Brisbane           Australia/South Pacific             223      0.82     0.67      1.2500    0.4771 97.41%  42.1%  91.6%  97.5%                223        -5.459  1.28e-07
+   Budapest                            Europe             223      2.06     1.65      2.2021    1.1943 92.36%  29.7%  79.5%  87.7%                223        -5.666 4.517e-08
+      Minsk                            Europe             223      2.60     2.06      2.5753    1.5153 86.93%  29.6%  71.0%  82.6%                223        -9.362         0
+  Abu Dhabi                       Middle East             223      1.04     0.81      1.4327    0.5906 98.51%  43.6%  88.6%  94.7%                223        -3.150  0.001854
+      Boise                     North America             223      2.29     1.81      2.3346    1.3237 90.63%  33.0%  76.9%  86.1%                223        -6.399 9.165e-10
+Albuquerque                     North America             223      1.65     1.32      1.9463    0.9455 96.45%  38.5%  84.5%  91.6%                223        -9.021  2.22e-16
+   Cheyenne                     North America             223      2.10     1.72      2.2672    1.2289 93.38%  32.1%  78.7%  88.7%                223        -9.267         0
+  Sao Paulo South/Central America & Carribean             223      1.23     0.99      1.6801    0.7019 98.93%  45.0%  89.3%  95.7%                223        -8.420 4.663e-15
+
+[DM] Per-city summary | significant(p<0.05): 10/10 | Fisher combined p=0
+Not enough models for epistemic on eval_set=3 (found 0).
+
+======================================================================
+RUN | seed_split: 1004 | seed_model: 42 | device: cpu | H=6
+======================================================================
+[DIAG] Available years: 1995..2020, cities: 321
+[DIAG] Time splits -> TRAIN<= 1999, VAL: 2000..2000, TEST: 2001..2020
+[DIAG] Horizon H=6
+/tmp/ipython-input-3828873912.py:286: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  for city, g in monthly.groupby("City", sort=False):
+[DIAG] Eval set id: 4 | eval_seed: 127
+[DIAG] Eval (TEST) cities: ['Lome', 'Tashkent', 'Ulan-bator', 'Auckland', 'Kiev', 'Kuwait', 'Cleveland', 'Cincinnati', 'Caribou', 'Panama City']
+[DIAG] Geographic split -> TRAIN cities: 280, VAL cities: 31, TEST cities: 10
+/tmp/ipython-input-3828873912.py:658: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  for city, g in df.groupby("City", sort=False):
+[DIAG] TRAIN samples: 11184
+[DIAG] VAL samples: 203
+[DIAG] TEST samples: 2230
+Epoch   1/200 | Train Obj: 11.8929 | Val Obj: 11.6371 | LR: 0.000600
+Epoch   2/200 | Train Obj: 10.1806 | Val Obj: 10.7629 | LR: 0.000900
+Epoch   3/200 | Train Obj: 9.7378 | Val Obj: 10.6347 | LR: 0.001200
+Epoch   4/200 | Train Obj: 9.5365 | Val Obj: 10.6057 | LR: 0.001500
+Epoch   5/200 | Train Obj: 9.3710 | Val Obj: 10.4896 | LR: 0.001800
+Epoch   6/200 | Train Obj: 9.2136 | Val Obj: 10.5310 | LR: 0.002100
+Epoch   7/200 | Train Obj: 9.0892 | Val Obj: 10.5219 | LR: 0.002400
+Epoch   8/200 | Train Obj: 9.0059 | Val Obj: 10.6339 | LR: 0.002700
+Epoch   9/200 | Train Obj: 8.9033 | Val Obj: 10.7145 | LR: 0.003000
+Epoch  10/200 | Train Obj: 8.7970 | Val Obj: 10.6621 | LR: 0.003000
+Epoch  11/200 | Train Obj: 8.6726 | Val Obj: 10.9015 | LR: 0.003000
+Epoch  12/200 | Train Obj: 8.5410 | Val Obj: 10.8173 | LR: 0.002999
+Epoch  13/200 | Train Obj: 8.4119 | Val Obj: 11.1072 | LR: 0.002998
+Epoch  14/200 | Train Obj: 8.2940 | Val Obj: 11.0706 | LR: 0.002997
+Epoch  15/200 | Train Obj: 8.1650 | Val Obj: 10.9330 | LR: 0.002995
+Epoch  16/200 | Train Obj: 8.0472 | Val Obj: 11.1820 | LR: 0.002993
+Epoch  17/200 | Train Obj: 7.9195 | Val Obj: 11.2474 | LR: 0.002990
+Epoch  18/200 | Train Obj: 7.8263 | Val Obj: 11.2146 | LR: 0.002987
+Epoch  19/200 | Train Obj: 7.7117 | Val Obj: 11.3400 | LR: 0.002983
+Epoch  20/200 | Train Obj: 7.6316 | Val Obj: 11.4799 | LR: 0.002980
+Epoch  21/200 | Train Obj: 7.5516 | Val Obj: 11.4076 | LR: 0.002975
+Epoch  22/200 | Train Obj: 7.4388 | Val Obj: 11.5236 | LR: 0.002971
+Epoch  23/200 | Train Obj: 7.3607 | Val Obj: 11.6668 | LR: 0.002965
+Epoch  24/200 | Train Obj: 7.3207 | Val Obj: 11.6662 | LR: 0.002960
+Epoch  25/200 | Train Obj: 7.2289 | Val Obj: 11.6390 | LR: 0.002954
+Early stopping.
+[ART] saved table: artifacts/tables/sign_mag_dependence_set4_seedS1004_seedM42_H6.csv and artifacts/tables/sign_mag_dependence_set4_seedS1004_seedM42_H6.tex
+[DM] Model vs Persist | DM=-13.665 | p=0 | mean(d)=-2.951271 (negative=better)
+[MBB] block=6 | CI95(mean d_model-pers)=[-3.193296,-2.249213]
+[MBB] block=12 | CI95(mean d_model-pers)=[-3.201086,-2.253280]
+[MBB] block=24 | CI95(mean d_model-pers)=[-3.300496,-2.108993]
+[MBB] block=6 | RMSE(flat) CI95=[1.862,2.091]
+[MBB] block=12 | RMSE(flat) CI95=[1.840,2.108]
+[MBB] block=24 | RMSE(flat) CI95=[1.796,2.154]
+
+===== GLOBAL TEST (JOINT; TEST cities; years > VAL) =====
+H=6 | RMSE(flat): 1.98 °C [1.92, 2.03] | MAE(flat): 1.35 °C [1.31, 1.38] | NLL(per-h): 1.8517 nats | EnergyScore(joint): 2.9433
+AVG over horizons | RMSE: 1.98 | MAE: 1.35 | CRPS: 0.9896 | Cov@95(avg): 93.4%
+Clim-0(flat)  | RMSE: 1.97 | MAE: 1.36
+Persist(flat) | RMSE: 2.62 | MAE: 1.82
+TinyTransformer(flat) | RMSE: 1.96 | MAE: 1.34 | train_sec: 40.9
+
+----- Per-horizon summary (h=1..H) -----
+h= 1 | RMSE=1.90 | MAE=1.30 | CRPS=0.9515 | Cov@95=94.8%
+h= 2 | RMSE=1.99 | MAE=1.36 | CRPS=0.9897 | Cov@95=93.8%
+h= 3 | RMSE=2.01 | MAE=1.37 | CRPS=1.0054 | Cov@95=93.9%
+h= 4 | RMSE=2.02 | MAE=1.36 | CRPS=0.9993 | Cov@95=93.3%
+h= 5 | RMSE=1.98 | MAE=1.35 | CRPS=0.9932 | Cov@95=92.8%
+h= 6 | RMSE=1.97 | MAE=1.34 | CRPS=0.9983 | Cov@95=91.9%
+
+----- Decade-wise (TEST; grouped by first horizon year) -----
+2000s | N=1080 | RMSE(flat)=2.02 | MAE(flat)=1.38 | CRPS(avg)=1.0064 | Cov@95(avg)=93.3%
+2010s | N=1150 | RMSE(flat)=1.94 | MAE(flat)=1.32 | CRPS(avg)=0.9738 | Cov@95(avg)=93.5%
+
+----- Regime-wise (TEST; grouped by first horizon year ranges) -----
+2001-2004 | N= 480 | RMSE(flat)=1.96 | MAE(flat)=1.35 | CRPS(avg)=0.9800 | Cov@95(avg)=94.0%
+2005-2007 | N= 360 | RMSE(flat)=2.07 | MAE(flat)=1.42 | CRPS(avg)=1.0395 | Cov@95(avg)=92.5%
+2008-2010 | N= 360 | RMSE(flat)=2.06 | MAE(flat)=1.40 | CRPS(avg)=1.0349 | Cov@95(avg)=91.9%
+2011-2014 | N= 480 | RMSE(flat)=1.99 | MAE(flat)=1.27 | CRPS(avg)=0.9495 | Cov@95(avg)=93.5%
+2015-2017 | N= 360 | RMSE(flat)=1.93 | MAE(flat)=1.39 | CRPS(avg)=1.0124 | Cov@95(avg)=93.8%
+2018-2020 | N= 190 | RMSE(flat)=1.71 | MAE(flat)=1.23 | CRPS(avg)=0.8915 | Cov@95(avg)=95.5%
+
+----- Per-city (eval cities; years > VAL) -----
+       City                            Region  N_test_windows RMSE (°C) MAE (°C) NLL (per-h) CRPS (°C)  CIA95 Cov@50 Cov@90 Cov@95  N_windows_in_test DM_vs_Persist      DM_p
+       Lome                            Africa             223      0.44     0.36      0.7904    0.2729 94.74%  52.5%  99.9% 100.0%                223        -6.987 3.229e-11
+   Tashkent                              Asia             223      2.44     1.83      2.3574    1.3475 94.96%  36.9%  82.1%  90.2%                223        -6.442 7.221e-10
+ Ulan-bator                              Asia             223      3.28     2.50      2.7729    1.8712 84.97%  27.8%  69.5%  80.7%                223        -8.574 1.776e-15
+   Auckland           Australia/South Pacific             223      0.84     0.65      1.2758    0.4738 95.13%  47.0%  96.3%  99.6%                223        -9.527         0
+       Kiev                            Europe             223      2.40     1.84      2.3865    1.3576 94.17%  35.1%  81.5%  89.5%                223        -8.289 1.088e-14
+     Kuwait                       Middle East             223      1.34     0.99      1.6247    0.7261 98.99%  42.8%  92.2%  96.0%                223        -7.321 4.467e-12
+  Cleveland                     North America             223      2.23     1.69      2.2217    1.2236 97.16%  36.7%  85.6%  92.3%                223        -7.805 2.327e-13
+ Cincinnati                     North America             223      2.21     1.71      2.2551    1.2305 97.87%  35.9%  85.3%  93.0%                223        -8.818  2.22e-16
+    Caribou                     North America             223      1.97     1.50      2.0619    1.0912 97.63%  37.8%  84.2%  92.8%                223        -9.000  2.22e-16
+Panama City South/Central America & Carribean             223      0.50     0.39      0.7707    0.3015 94.74%  55.3% 100.0% 100.0%                223        -2.755   0.00635
+
+[DM] Per-city summary | significant(p<0.05): 10/10 | Fisher combined p=0
+
+======================================================================
+RUN | seed_split: 1004 | seed_model: 43 | device: cpu | H=6
+======================================================================
+[DIAG] Available years: 1995..2020, cities: 321
+[DIAG] Time splits -> TRAIN<= 1999, VAL: 2000..2000, TEST: 2001..2020
+[DIAG] Horizon H=6
+/tmp/ipython-input-3828873912.py:286: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  for city, g in monthly.groupby("City", sort=False):
+[DIAG] Eval set id: 4 | eval_seed: 127
+[DIAG] Eval (TEST) cities: ['Lome', 'Tashkent', 'Ulan-bator', 'Auckland', 'Kiev', 'Kuwait', 'Cleveland', 'Cincinnati', 'Caribou', 'Panama City']
+[DIAG] Geographic split -> TRAIN cities: 280, VAL cities: 31, TEST cities: 10
+/tmp/ipython-input-3828873912.py:658: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  for city, g in df.groupby("City", sort=False):
+[DIAG] TRAIN samples: 11184
+[DIAG] VAL samples: 203
+[DIAG] TEST samples: 2230
+Epoch   1/200 | Train Obj: 11.8428 | Val Obj: 11.5882 | LR: 0.000600
+Epoch   2/200 | Train Obj: 10.1709 | Val Obj: 10.8296 | LR: 0.000900
+Epoch   3/200 | Train Obj: 9.6956 | Val Obj: 10.6851 | LR: 0.001200
+Epoch   4/200 | Train Obj: 9.5359 | Val Obj: 10.4691 | LR: 0.001500
+Epoch   5/200 | Train Obj: 9.3782 | Val Obj: 10.5784 | LR: 0.001800
+Epoch   6/200 | Train Obj: 9.2643 | Val Obj: 10.6268 | LR: 0.002100
+Epoch   7/200 | Train Obj: 9.1435 | Val Obj: 10.4489 | LR: 0.002400
+Epoch   8/200 | Train Obj: 9.0446 | Val Obj: 10.4876 | LR: 0.002700
+Epoch   9/200 | Train Obj: 8.9610 | Val Obj: 10.6421 | LR: 0.003000
+Epoch  10/200 | Train Obj: 8.8529 | Val Obj: 10.6570 | LR: 0.003000
+Epoch  11/200 | Train Obj: 8.7291 | Val Obj: 10.7908 | LR: 0.003000
+Epoch  12/200 | Train Obj: 8.5834 | Val Obj: 10.8744 | LR: 0.002999
+Epoch  13/200 | Train Obj: 8.4368 | Val Obj: 11.0470 | LR: 0.002998
+Epoch  14/200 | Train Obj: 8.3028 | Val Obj: 11.2697 | LR: 0.002997
+Epoch  15/200 | Train Obj: 8.1692 | Val Obj: 11.2421 | LR: 0.002995
+Epoch  16/200 | Train Obj: 8.0338 | Val Obj: 11.3964 | LR: 0.002993
+Epoch  17/200 | Train Obj: 7.9273 | Val Obj: 11.3715 | LR: 0.002990
+Epoch  18/200 | Train Obj: 7.8122 | Val Obj: 11.5050 | LR: 0.002987
+Epoch  19/200 | Train Obj: 7.6946 | Val Obj: 11.5844 | LR: 0.002983
+Epoch  20/200 | Train Obj: 7.6165 | Val Obj: 11.6576 | LR: 0.002980
+Epoch  21/200 | Train Obj: 7.5294 | Val Obj: 11.6708 | LR: 0.002975
+Epoch  22/200 | Train Obj: 7.4522 | Val Obj: 11.7290 | LR: 0.002971
+Epoch  23/200 | Train Obj: 7.3585 | Val Obj: 11.8802 | LR: 0.002965
+Epoch  24/200 | Train Obj: 7.2836 | Val Obj: 11.7682 | LR: 0.002960
+Epoch  25/200 | Train Obj: 7.2209 | Val Obj: 11.8503 | LR: 0.002954
+Epoch  26/200 | Train Obj: 7.1519 | Val Obj: 11.8898 | LR: 0.002948
+Epoch  27/200 | Train Obj: 7.0639 | Val Obj: 12.0962 | LR: 0.002941
+Early stopping.
+[ART] saved table: artifacts/tables/sign_mag_dependence_set4_seedS1004_seedM43_H6.csv and artifacts/tables/sign_mag_dependence_set4_seedS1004_seedM43_H6.tex
+[DM] Model vs Persist | DM=-13.166 | p=0 | mean(d)=-2.853909 (negative=better)
+[MBB] block=6 | CI95(mean d_model-pers)=[-3.193136,-2.267816]
+[MBB] block=12 | CI95(mean d_model-pers)=[-3.194592,-2.246912]
+[MBB] block=24 | CI95(mean d_model-pers)=[-3.274188,-2.128271]
+[MBB] block=6 | RMSE(flat) CI95=[1.891,2.119]
+[MBB] block=12 | RMSE(flat) CI95=[1.858,2.146]
+[MBB] block=24 | RMSE(flat) CI95=[1.813,2.194]
+
+===== GLOBAL TEST (JOINT; TEST cities; years > VAL) =====
+H=6 | RMSE(flat): 2.00 °C [1.95, 2.06] | MAE(flat): 1.36 °C [1.33, 1.40] | NLL(per-h): 1.8495 nats | EnergyScore(joint): 2.9690
+AVG over horizons | RMSE: 2.00 | MAE: 1.36 | CRPS: 1.0001 | Cov@95(avg): 91.9%
+Clim-0(flat)  | RMSE: 1.97 | MAE: 1.36
+Persist(flat) | RMSE: 2.62 | MAE: 1.82
+TinyTransformer(flat) | RMSE: 1.96 | MAE: 1.34 | train_sec: 42.2
+
+----- Per-horizon summary (h=1..H) -----
+h= 1 | RMSE=1.91 | MAE=1.31 | CRPS=0.9590 | Cov@95=92.4%
+h= 2 | RMSE=2.01 | MAE=1.38 | CRPS=1.0064 | Cov@95=91.1%
+h= 3 | RMSE=2.05 | MAE=1.39 | CRPS=1.0210 | Cov@95=90.7%
+h= 4 | RMSE=2.04 | MAE=1.38 | CRPS=1.0153 | Cov@95=91.7%
+h= 5 | RMSE=2.01 | MAE=1.37 | CRPS=1.0014 | Cov@95=92.9%
+h= 6 | RMSE=2.00 | MAE=1.35 | CRPS=0.9976 | Cov@95=92.9%
+
+----- Decade-wise (TEST; grouped by first horizon year) -----
+2000s | N=1080 | RMSE(flat)=2.03 | MAE(flat)=1.38 | CRPS(avg)=1.0113 | Cov@95(avg)=91.9%
+2010s | N=1150 | RMSE(flat)=1.98 | MAE(flat)=1.35 | CRPS(avg)=0.9896 | Cov@95(avg)=92.0%
+
+----- Regime-wise (TEST; grouped by first horizon year ranges) -----
+2001-2004 | N= 480 | RMSE(flat)=1.97 | MAE(flat)=1.35 | CRPS(avg)=0.9807 | Cov@95(avg)=92.8%
+2005-2007 | N= 360 | RMSE(flat)=2.08 | MAE(flat)=1.43 | CRPS(avg)=1.0475 | Cov@95(avg)=90.7%
+2008-2010 | N= 360 | RMSE(flat)=2.10 | MAE(flat)=1.43 | CRPS(avg)=1.0555 | Cov@95(avg)=90.3%
+2011-2014 | N= 480 | RMSE(flat)=2.03 | MAE(flat)=1.29 | CRPS(avg)=0.9620 | Cov@95(avg)=92.3%
+2015-2017 | N= 360 | RMSE(flat)=1.95 | MAE(flat)=1.41 | CRPS(avg)=1.0204 | Cov@95(avg)=92.2%
+2018-2020 | N= 190 | RMSE(flat)=1.75 | MAE(flat)=1.26 | CRPS(avg)=0.9120 | Cov@95(avg)=93.7%
+
+----- Per-city (eval cities; years > VAL) -----
+       City                            Region  N_test_windows RMSE (°C) MAE (°C) NLL (per-h) CRPS (°C)  CIA95 Cov@50 Cov@90 Cov@95  N_windows_in_test DM_vs_Persist      DM_p
+       Lome                            Africa             223      0.44     0.35      0.6854    0.2593 94.74%  54.0%  99.5% 100.0%                223        -7.999 6.906e-14
+   Tashkent                              Asia             223      2.46     1.87      2.4068    1.3707 93.07%  36.6%  80.2%  88.4%                223        -6.199 2.733e-09
+ Ulan-bator                              Asia             223      3.36     2.57      2.8391    1.9286 80.17%  25.3%  65.9%  76.2%                223        -7.820 2.112e-13
+   Auckland           Australia/South Pacific             223      0.84     0.65      1.2661    0.4715 95.92%  47.9%  94.6%  98.9%                223        -9.207         0
+       Kiev                            Europe             223      2.41     1.86      2.3922    1.3692 92.36%  34.8%  78.4%  87.7%                223        -8.198 1.954e-14
+     Kuwait                       Middle East             223      1.36     1.02      1.6549    0.7395 99.11%  42.8%  91.9%  95.1%                223        -7.027  2.56e-11
+  Cleveland                     North America             223      2.26     1.71      2.2546    1.2418 95.43%  35.4%  82.8%  90.7%                223        -7.414  2.56e-12
+ Cincinnati                     North America             223      2.23     1.73      2.2766    1.2408 96.45%  35.2%  84.3%  91.6%                223        -8.438 4.219e-15
+    Caribou                     North America             223      1.97     1.50      2.0806    1.0919 95.59%  38.0%  83.9%  90.8%                223        -8.471 3.331e-15
+Panama City South/Central America & Carribean             223      0.50     0.38      0.6383    0.2875 94.74%  56.6%  98.6% 100.0%                223        -2.945  0.003573
+
+[DM] Per-city summary | significant(p<0.05): 10/10 | Fisher combined p=0
+
+======================================================================
+RUN | seed_split: 1004 | seed_model: 44 | device: cpu | H=6
+======================================================================
+[DIAG] Available years: 1995..2020, cities: 321
+[DIAG] Time splits -> TRAIN<= 1999, VAL: 2000..2000, TEST: 2001..2020
+[DIAG] Horizon H=6
+/tmp/ipython-input-3828873912.py:286: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  for city, g in monthly.groupby("City", sort=False):
+[DIAG] Eval set id: 4 | eval_seed: 127
+[DIAG] Eval (TEST) cities: ['Lome', 'Tashkent', 'Ulan-bator', 'Auckland', 'Kiev', 'Kuwait', 'Cleveland', 'Cincinnati', 'Caribou', 'Panama City']
+[DIAG] Geographic split -> TRAIN cities: 280, VAL cities: 31, TEST cities: 10
+/tmp/ipython-input-3828873912.py:658: FutureWarning: The default of observed=False is deprecated and will be changed to True in a future version of pandas. Pass observed=False to retain current behavior or observed=True to adopt the future default and silence this warning.
+  for city, g in df.groupby("City", sort=False):
+[DIAG] TRAIN samples: 11184
+[DIAG] VAL samples: 203
+[DIAG] TEST samples: 2230
+Epoch   1/200 | Train Obj: 12.0167 | Val Obj: 12.3627 | LR: 0.000600
+Epoch   2/200 | Train Obj: 10.1836 | Val Obj: 10.7868 | LR: 0.000900
+Epoch   3/200 | Train Obj: 9.6895 | Val Obj: 10.6730 | LR: 0.001200
+Epoch   4/200 | Train Obj: 9.5561 | Val Obj: 10.4852 | LR: 0.001500
+Epoch   5/200 | Train Obj: 9.4153 | Val Obj: 10.4053 | LR: 0.001800
+Epoch   6/200 | Train Obj: 9.2881 | Val Obj: 10.5090 | LR: 0.002100
+Epoch   7/200 | Train Obj: 9.1707 | Val Obj: 10.5962 | LR: 0.002400
+Epoch   8/200 | Train Obj: 9.0736 | Val Obj: 10.5019 | LR: 0.002700
+Epoch   9/200 | Train Obj: 8.9646 | Val Obj: 10.5928 | LR: 0.003000
+Epoch  10/200 | Train Obj: 8.8549 | Val Obj: 10.7954 | LR: 0.003000
+Epoch  11/200 | Train Obj: 8.7265 | Val Obj: 11.0381 | LR: 0.003000
+Epoch  12/200 | Train Obj: 8.5950 | Val Obj: 10.9755 | LR: 0.002999
+Epoch  13/200 | Train Obj: 8.4595 | Val Obj: 11.0982 | LR: 0.002998
+Epoch  14/200 | Train Obj: 8.3427 | Val Obj: 11.2413 | LR: 0.002997
+Epoch  15/200 | Train Obj: 8.1891 | Val Obj: 11.1760 | LR: 0.002995
+Epoch  16/200 | Train Obj: 8.0808 | Val Obj: 11.3287 | LR: 0.002993
+Epoch  17/200 | Train Obj: 7.9683 | Val Obj: 11.4020 | LR: 0.002990
+Epoch  18/200 | Train Obj: 7.8576 | Val Obj: 11.5332 | LR: 0.002987
+Epoch  19/200 | Train Obj: 7.7330 | Val Obj: 11.4144 | LR: 0.002983
+Epoch  20/200 | Train Obj: 7.6611 | Val Obj: 11.6684 | LR: 0.002980
+Epoch  21/200 | Train Obj: 7.5685 | Val Obj: 11.7735 | LR: 0.002975
+Epoch  22/200 | Train Obj: 7.4867 | Val Obj: 11.7348 | LR: 0.002971
+Epoch  23/200 | Train Obj: 7.3926 | Val Obj: 11.7052 | LR: 0.002965
+Epoch  24/200 | Train Obj: 7.3137 | Val Obj: 11.7894 | LR: 0.002960
+Epoch  25/200 | Train Obj: 7.2712 | Val Obj: 11.8159 | LR: 0.002954
+Early stopping.
+[ART] saved table: artifacts/tables/sign_mag_dependence_set4_seedS1004_seedM44_H6.csv and artifacts/tables/sign_mag_dependence_set4_seedS1004_seedM44_H6.tex
+[DM] Model vs Persist | DM=-13.493 | p=0 | mean(d)=-2.889821 (negative=better)
+[MBB] block=6 | CI95(mean d_model-pers)=[-3.220853,-2.288236]
+[MBB] block=12 | CI95(mean d_model-pers)=[-3.254725,-2.191725]
+[MBB] block=24 | CI95(mean d_model-pers)=[-3.331660,-2.076327]
+[MBB] block=6 | RMSE(flat) CI95=[1.880,2.113]
+[MBB] block=12 | RMSE(flat) CI95=[1.847,2.130]
+[MBB] block=24 | RMSE(flat) CI95=[1.801,2.176]
+
+===== GLOBAL TEST (JOINT; TEST cities; years > VAL) =====
+H=6 | RMSE(flat): 1.99 °C [1.94, 2.05] | MAE(flat): 1.36 °C [1.32, 1.39] | NLL(per-h): 1.8807 nats | EnergyScore(joint): 2.9654
+AVG over horizons | RMSE: 1.99 | MAE: 1.36 | CRPS: 0.9995 | Cov@95(avg): 92.3%
+Clim-0(flat)  | RMSE: 1.97 | MAE: 1.36
+Persist(flat) | RMSE: 2.62 | MAE: 1.82
+TinyTransformer(flat) | RMSE: 1.96 | MAE: 1.34 | train_sec: 43.2
+
+----- Per-horizon summary (h=1..H) -----
+h= 1 | RMSE=1.93 | MAE=1.32 | CRPS=0.9774 | Cov@95=92.5%
+h= 2 | RMSE=2.00 | MAE=1.36 | CRPS=1.0045 | Cov@95=92.5%
+h= 3 | RMSE=2.04 | MAE=1.39 | CRPS=1.0207 | Cov@95=91.7%
+h= 4 | RMSE=2.00 | MAE=1.36 | CRPS=1.0034 | Cov@95=91.5%
+h= 5 | RMSE=2.00 | MAE=1.35 | CRPS=0.9982 | Cov@95=92.2%
+h= 6 | RMSE=1.99 | MAE=1.36 | CRPS=0.9931 | Cov@95=93.3%
+
+----- Decade-wise (TEST; grouped by first horizon year) -----
+2000s | N=1080 | RMSE(flat)=2.03 | MAE(flat)=1.38 | CRPS(avg)=1.0133 | Cov@95(avg)=92.2%
+2010s | N=1150 | RMSE(flat)=1.96 | MAE(flat)=1.33 | CRPS(avg)=0.9866 | Cov@95(avg)=92.4%
+
+----- Regime-wise (TEST; grouped by first horizon year ranges) -----
+2001-2004 | N= 480 | RMSE(flat)=1.96 | MAE(flat)=1.35 | CRPS(avg)=0.9830 | Cov@95(avg)=93.3%
+2005-2007 | N= 360 | RMSE(flat)=2.08 | MAE(flat)=1.42 | CRPS(avg)=1.0450 | Cov@95(avg)=91.2%
+2008-2010 | N= 360 | RMSE(flat)=2.09 | MAE(flat)=1.41 | CRPS(avg)=1.0518 | Cov@95(avg)=90.3%
+2011-2014 | N= 480 | RMSE(flat)=2.02 | MAE(flat)=1.28 | CRPS(avg)=0.9630 | Cov@95(avg)=92.4%
+2015-2017 | N= 360 | RMSE(flat)=1.94 | MAE(flat)=1.40 | CRPS(avg)=1.0211 | Cov@95(avg)=92.6%
+2018-2020 | N= 190 | RMSE(flat)=1.73 | MAE(flat)=1.25 | CRPS(avg)=0.9078 | Cov@95(avg)=94.6%
+
+----- Per-city (eval cities; years > VAL) -----
+       City                            Region  N_test_windows RMSE (°C) MAE (°C) NLL (per-h) CRPS (°C)  CIA95 Cov@50 Cov@90 Cov@95  N_windows_in_test DM_vs_Persist      DM_p
+       Lome                            Africa             223      0.44     0.36      0.7800    0.2712 94.74%  48.6% 100.0% 100.0%                223        -6.658 2.148e-10
+   Tashkent                              Asia             223      2.44     1.84      2.4220    1.3629 92.83%  35.9%  79.5%  88.2%                223        -6.524  4.58e-10
+ Ulan-bator                              Asia             223      3.34     2.55      2.8882    1.9186 80.56%  24.0%  66.0%  76.5%                223        -8.140  2.82e-14
+   Auckland           Australia/South Pacific             223      0.84     0.65      1.2691    0.4757 95.21%  45.3%  96.6%  99.6%                223        -9.402         0
+       Kiev                            Europe             223      2.40     1.84      2.4187    1.3591 93.23%  34.5%  80.2%  88.6%                223        -8.303 9.992e-15
+     Kuwait                       Middle East             223      1.36     1.01      1.6479    0.7393 98.95%  41.4%  90.9%  95.1%                223        -7.078 1.901e-11
+  Cleveland                     North America             223      2.25     1.70      2.2547    1.2345 96.53%  34.4%  83.4%  91.7%                223        -7.657 5.798e-13
+ Cincinnati                     North America             223      2.22     1.71      2.2706    1.2363 96.14%  35.1%  84.2%  91.3%                223        -8.651  1.11e-15
+    Caribou                     North America             223      1.97     1.50      2.0762    1.0917 96.77%  35.8%  84.8%  91.9%                223        -8.887  2.22e-16
+Panama City South/Central America & Carribean             223      0.51     0.39      0.7794    0.3061 94.74%  52.8%  99.8% 100.0%                223        -1.955   0.05187
+
+[DM] Per-city summary | significant(p<0.05): 9/10 | Fisher combined p=0
+Not enough models for epistemic on eval_set=4 (found 0).
+
+######################################################################
+EVAL-SET DISTRIBUTION (over 5 different 10-city TEST sets)
+######################################################################
+rmse_flat: 1.7035 ± 0.2068
+mae_flat: 1.2099 ± 0.1121
+nll_per_h: 1.7641 ± 0.0800
+energy_joint: 2.5960 ± 0.2601
+energy_ind: 2.6001 ± 0.2586
+pit_ks: 0.1345 ± 0.0294
+iw95: 6.2472 ± 0.6364
+cal_ae: 0.0503 ± 0.0121
+corr_offdiag: 0.1786 ± 0.0309
+crps_avg: 0.8841 ± 0.0859
+cov95_avg: 94.3838 ± 1.6730
+[ART] zipped -> artifacts/artifacts.zip
