@@ -60,9 +60,14 @@ from sklearn.preprocessing import StandardScaler
 from torch.utils.data import DataLoader, TensorDataset
 from scipy.stats import t as student_t, chi2
 
-# ---------------- Hardcoded path + Config ----------------
+# KaggleHub import
+import kagglehub
+from kagglehub import KaggleDatasetAdapter
 
-CSV_PATH = "/content/sample_data/city_temperature.csv"
+# ---------------- Path + Config ----------------
+
+KAGGLE_DATASET_REF = "sudalairajkumar/daily-temperature-of-major-cities"
+KAGGLE_FILE_PATH = "city_temperature.csv"
 
 WINDOW = 12
 HORIZON = 6          # JOINT multi-horizon length (set to 6 or 12)
@@ -105,7 +110,6 @@ EVAL_MODE = "stratified_sets"   # "fixed" / "stratified_sets"
 ENFORCE_DISJOINT_EVAL_SETS = True
 
 #EVAL_CITIES_FIXED = ["Lome","Manila","Sydney","Lisbon","Bratislava","Kuwait","Anchorage","Buffalo","Albany","Sao Paulo"]
-#EVAL_CITIES_FIXED = ["Cairo", "Seoul", "Perth", "London", "Lisbon", "Kuwait", "Cleveland", "Cincinnati", "Brownsville", "Rio de Janeiro"]
 
 SEED = 42
 
@@ -180,7 +184,6 @@ def set_seed(seed: int = SEED, deterministic: bool = True) -> None:
 
 REQ_COLS = ["Region", "Country", "State", "City", "Month", "Day", "Year", "AvgTemperature"]
 
-
 def norm_city_name(s: str) -> str:
     s = str(s).strip()
     s = unicodedata.normalize("NFKD", s).encode("ascii", "ignore").decode("ascii")
@@ -189,10 +192,7 @@ def norm_city_name(s: str) -> str:
     s = re.sub(r"[^a-z\s\-]", "", s)
     return s.strip()
 
-
-def read_csv(csv_path: str) -> pd.DataFrame:
-    df = pd.read_csv(csv_path, low_memory=False, usecols=REQ_COLS)
-
+def _process_raw_dataframe(df: pd.DataFrame) -> pd.DataFrame:
     for c in ["Region", "Country", "State", "City"]:
         df[c] = df[c].astype(str)
 
@@ -203,6 +203,21 @@ def read_csv(csv_path: str) -> pd.DataFrame:
     df.loc[df["AvgTemperature"] <= -90, "AvgTemperature"] = np.nan
     df["AvgTemperature"] = (df["AvgTemperature"] - 32.0) * (5.0 / 9.0)
     return df
+
+
+def read_csv(csv_path: str) -> pd.DataFrame:
+    df = pd.read_csv(csv_path, low_memory=False, usecols=REQ_COLS)
+    return _process_raw_dataframe(df)
+
+
+def load_kaggle_dataset(dataset_ref: str, file_path: str) -> pd.DataFrame:
+    df = kagglehub.load_dataset(
+        KaggleDatasetAdapter.PANDAS,
+        dataset_ref,
+        file_path,
+        pandas_kwargs={"usecols": REQ_COLS, "low_memory": False}
+    )
+    return _process_raw_dataframe(df)
 
 
 def probe_span(df: pd.DataFrame) -> tuple[int, int]:
@@ -607,6 +622,7 @@ def pchip_impute_short_gaps_window(values: np.ndarray, max_gap: int) -> np.ndarr
 
 
 # --------- Geographic split (train/val/test cities disjoint) ---------
+
 def split_cities_geographic(all_cities: list[str], eval_set_norm: set[str], seed: int) -> tuple[set[str], set[str], set[str]]:
     all_norm = sorted({norm_city_name(c) for c in all_cities})
     test_norm = set(all_norm) & set(eval_set_norm)
@@ -1734,7 +1750,7 @@ def sign_mag_dependence_table(model, X_np, y_np, device, n_bins=10, max_rows=Non
 
 def parse_args(argv=None) -> argparse.Namespace:
     p = argparse.ArgumentParser(description="Joint multi-horizon conditional SPN (Colab-friendly)")
-    p.add_argument("--csv_path", type=str, default=CSV_PATH)
+    p.add_argument("--csv_path", type=str, default="") # Changed default to empty string
     p.add_argument("--n_samples", type=int, default=1000)
     p.add_argument("--seed", type=int, default=SEED)
     p.add_argument("--horizon", type=int, default=HORIZON)
@@ -1745,7 +1761,7 @@ def parse_args(argv=None) -> argparse.Namespace:
     p.add_argument("--hidden", type=int, default=HIDDEN)
     p.add_argument("--dropout", type=float, default=DROPOUT)
     p.add_argument("--window", type=int, default=WINDOW)
-    p.add_argument("--seeds", type=str, default="42,43,44")  #"42,43,44"
+    p.add_argument("--seeds", type=str, default="42,43,44")
     p.add_argument("--n_eval_sets", type=int, default=5)
     p.add_argument("--eval_seed_base", type=int, default=123)
     p.add_argument("--split_seed_base", type=int, default=1000)
@@ -1777,7 +1793,7 @@ def run_once(
     plot_framework_diagram_once()
 
     # ---------------- Load + preprocess ----------------
-    df = read_csv(args.csv_path)
+    df = load_kaggle_dataset(KAGGLE_DATASET_REF, KAGGLE_FILE_PATH)
     df = df[df["Year"] >= 1900].copy()
     y0, y1 = probe_span(df)
     print(f"[DIAG] Available years: {y0}..{y1}, cities: {df['City'].nunique()}")
@@ -1831,7 +1847,8 @@ def run_once(
     tag = f"set{eval_set_id}_seedS{seed_split}_seedM{seed_model}_H{H}"
     run_manifest = {
         "timestamp": time.strftime("%Y-%m-%d %H:%M:%S"),
-        "csv_path": args.csv_path,
+        "csv_path": args.csv_path, # This will now be empty if using KaggleHub
+        "kaggle_dataset_ref": KAGGLE_DATASET_REF, # Add new field for Kaggle reference
         "years": {"min": y0, "max": y1, "train_end": train_end, "val_end": val_end},
         "seeds": {"split": seed_split, "model": seed_model},
         "hyperparams": {
@@ -2429,8 +2446,7 @@ def compute_epistemic_for_evalset(eval_set_id: int, seed_split: int, seed_models
         })
 
     df_epi = pd.DataFrame(rows)
-    print("\nEpistemic decomposition (ensemble across seed_model):")
-    print(df_epi.to_string(index=False))
+    print("\nEpistemic decomposition (ensemble across seed_model):\n" + df_epi.to_string(index=False))
 
     save_table(df_epi, name=f"epistemic_evalset{eval_set_id}_seedS{seed_split}_H{H}")
 
@@ -2449,17 +2465,17 @@ def main(argv=None) -> None:
     seed_list = [int(s.strip()) for s in args.seeds.split(",") if s.strip() != ""]
     device = "cuda" if torch.cuda.is_available() else "cpu"
 
-    print("=== Reproducibility (ENV) ===")
+    print("=== Reproducibility (ENV) ==")
     print(f"Device: {device}")
     print(f"Torch: {torch.__version__} | NumPy: {np.__version__} | Pandas: {pd.__version__}")
-    print(f"CSV_PATH: {args.csv_path}")
+    print(f"KAGGLE_DATASET_REF: {KAGGLE_DATASET_REF}")
     print(f"Seeds to run: {seed_list}")
     print("=============================")
 
     all_runs = []
 
     # Pre-pass: read the dataset once, build monthly + anomalies, to generate the disjoint sets
-    df_raw_all = read_csv(args.csv_path)
+    df_raw_all = load_kaggle_dataset(KAGGLE_DATASET_REF, KAGGLE_FILE_PATH)
     df_raw_all = df_raw_all[df_raw_all["Year"] >= 1900].copy()
     y0_all, y1_all = probe_span(df_raw_all)
 
@@ -2556,7 +2572,7 @@ def main(argv=None) -> None:
             vals = df_set[k].to_numpy(dtype=np.float64)
             mu = float(vals.mean())
             sd = float(vals.std(ddof=1)) if len(vals) > 1 else 0.0
-            print(f"{k}: {mu:.4f} ± {sd:.4f}")
+            print(f"{k}: {mu:.4f} \u00B1 {sd:.4f}")
 
         plt.figure()
         plt.boxplot(df_set["rmse_flat"].to_numpy(dtype=np.float64))
