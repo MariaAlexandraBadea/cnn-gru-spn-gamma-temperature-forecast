@@ -1765,8 +1765,10 @@ def parse_args(argv=None) -> argparse.Namespace:
     p.add_argument("--n_eval_sets", type=int, default=5)
     p.add_argument("--eval_seed_base", type=int, default=123)
     p.add_argument("--split_seed_base", type=int, default=1000)
+    p.add_argument("--epochs", type=int, default=None)
+    p.add_argument("--patience", type=int, default=None)
+    p.add_argument("--batch", type=int, default=None)
     return p.parse_args(args=([] if argv is None else argv))
-
 
 def run_once(
       args: argparse.Namespace,
@@ -2461,6 +2463,15 @@ def compute_epistemic_for_evalset(eval_set_id: int, seed_split: int, seed_models
 # ---------------- MAIN ----------------
 def main(argv=None) -> None:
     args = parse_args(argv)
+
+    # ---- FORCE runtime hyperparams from CLI (prevents "script overwrites") ----
+    global EPOCHS, PATIENCE, BATCH
+    if hasattr(args, "epochs") and args.epochs is not None:
+        EPOCHS = int(args.epochs)
+    if hasattr(args, "patience") and args.patience is not None:
+        PATIENCE = int(args.patience)
+    if hasattr(args, "batch") and args.batch is not None:
+        BATCH = int(args.batch)
 
     seed_list = [int(s.strip()) for s in args.seeds.split(",") if s.strip() != ""]
     device = "cuda" if torch.cuda.is_available() else "cpu"
